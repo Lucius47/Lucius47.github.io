@@ -1,2 +1,2 @@
-Sitemap: http://muneebullah.me/sitemap.xml
-Sitemap: http://www.muneebullah.me/sitemap.xml
+Sitemap: https://muneebullah.com/sitemap.xml
+Sitemap: https://www.muneebullah.com/sitemap.xml
