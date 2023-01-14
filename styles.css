@@ -330,7 +330,7 @@ body {
   }
   
   /* Responsive layout - makes a single column-layout instead of three columns */
-  @media screen and (max-width: 800px) {
+  @media screen and (max-device-width: 480px) {
     .column {
       -ms-flex: 100%;
       flex: 100%;

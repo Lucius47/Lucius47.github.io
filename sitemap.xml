@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    <url>
+    <!-- <url>
         <loc>https://muneebullah.com/about.html</loc>
     </url>
     <url>
         <loc>https://muneebullah.com/contact.html</loc>
-    </url>
+    </url> -->
     <url>
-        <loc>https://muneebullah.com/game-dev-portfolio.html</loc>
+        <loc>https://muneebullah.com/portfolio-game_dev.html</loc>
     </url>
     <url>
         <loc>https://muneebullah.com/</loc>
     </url>
-    <url>
+    <!-- <url>
         <loc>https://muneebullah.com/privacy-policy.html</loc>
-    </url>
+    </url> -->
 </urlset>

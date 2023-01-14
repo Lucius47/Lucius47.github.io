@@ -3,10 +3,20 @@
 <html lang="en">
   <head>
 
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-TBC25386BG"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'G-TBC25386BG');
+	</script>
+
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"> -->
 	<title>Muneeb Ullah - Game Developer, Game Designer</title>
-	<!-- <meta name="description" content="Game Developer and Designer with over 2 years experience in the industry. I am available for hiring or freelance work."> -->
+	<!-- Description should be between 150 and 220 characters (spaces included). -->
 	<meta name="description" content="Interested in space exploration, 3D art, novels, hiking, movies, military aircrafts, archeology, and video games.">
 	<meta property="og:description" content="Available for hiring or freelance projects">
 	<meta name="twitter:title" content="Muneeb Ullah - Game Developer and Game Designer">
@@ -18,11 +28,6 @@
 	<meta property="og:title" content="Muneeb Ullah - Game Developer and Game Designer">
 	
 	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/images/heart.png">
-    <!-- <link rel="icon" type="image/png" sizes="16x16" href="assets/img/Icons/favicons/favicon16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/Icons/favicons/favicon32x32.png">
-    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/Icons/favicons/favicon180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/Icons/favicons/favicon192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/Icons/favicons/favicon515x512.png"> -->
 	
     <!-- for ion icons - usage example below -->
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"> -->
@@ -37,7 +42,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 
-    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+    <!-- <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script> -->
 
 		<script>
 
@@ -178,6 +183,8 @@
 				socialIcon( 'ArtStation', 'https://www.artstation.com/MuneebShaw', `my art & illustrations`) +
 				socialIcon( 'YouTube', 'https://www.youtube.com/Muneeb.Shaw', `unity tutorials & other videos`) +
 				socialIcon( 'Patreon', 'https://www.patreon.com/Muneeb.Shaw', `best way to support me ❤`);
+
+				document.getElementById("email_address").innerHTML = 'muneebul' + 'lah@a' + 'ol.com';
 				
 
 				// companies
@@ -404,12 +411,12 @@
 					<span class="name_sub">Game Developer | Game Designer | 3D Artist</span><br><!--Was commented-->
 					<div class="main_card">
 						<div class="social_icons" id="social_icons"></div>
-						<div class="email">muneebullah@aol.com</div>
+						<div class="email" id="email_address"><!-- populated by js--></div>
 
 						<!-- <div class="email-sub">please read <a href="https://acegikmo.notion.site/How-to-email-Freya-2f8ed8a5aa804cf2a68be0627a6fb30c">this</a> before contacting me</div> -->
 					</div>
 					<div style="display: flex; justify-content: center;">
-						<form action="/game-dev-portfolio.html" target="_blank" rel="noopener noreferrer">
+						<form action="/portfolio-game_dev.html" target="_blank" rel="noopener noreferrer">
 							<button class="cta_button" type="submit">My Work</button>
 						</form>
 						<form action="https://drive.google.com/file/d/11RXM26qlLjQ0Yi1OzYWMz0fxT6NL9L4X/view" target="_blank" rel="noopener noreferrer">
