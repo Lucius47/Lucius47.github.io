@@ -88,11 +88,25 @@
 
 					if (this.card.endsWith(".mp4"))
 					{
-						return `<div class="proj-card"><a href="${this.link}" target="_blank" rel="noopener noreferrer"><video autoplay playsinline loop><source src="./images/projectcards/${this.card}"></video></a></div>`;
+						if (this.link == undefined || this.link == '')
+						{
+							return `<div class="proj-card"><video autoplay playsinline loop><source src="./images/projectcards/${this.card}"></video></div>`;
+						}
+						else
+						{
+							return `<div class="proj-card"><a href="${this.link}" target="_blank" rel="noopener noreferrer"><video autoplay playsinline loop><source src="./images/projectcards/${this.card}"></video></a></div>`;
+						}
 					}
 					else
 					{
-						return `<div class="proj-card"><a href="${this.link}" target="_blank" rel="noopener noreferrer"><img src="./images/projectcards/${this.card}"></a></div>`;
+						if (this.link == undefined || this.link == '')
+						{
+							return `<div class="proj-card"><img src="./images/projectcards/${this.card}"></div>`;
+						}
+						else
+						{
+							return `<div class="proj-card"><a href="${this.link}" target="_blank" rel="noopener noreferrer"><img src="./images/projectcards/${this.card}"></a></div>`;
+						}
 					}
 
 				}
@@ -166,63 +180,70 @@
 				
 
 				// companies
+				let mobify = new Company( `Mobify`, `https://mobify.tech/`, "at");
+				let theKnights = new Company( `The Knights`, `https://mobify.tech/`, "at");
 				
 				
 				
-				// name, link, timespan, desc, company
+				// name, link, timespan, desc, company  • 
 
 				let airplaneGame = new Project( `City Pilot Flight`,
-					`https://acegikmo.com/shapes/`,
-					undefined, `an arcade airplane simulation game for mobile devices<br>
-					<a href="link">Play Store</a> • <a href="link">Itch.io</a>` );
+					``,
+					undefined, 
+					`an arcade airplane simulation game for mobile devices<br>
+					<a href="https://play.google.com/store/apps/details?id=com.volcano.city.airplane.pilotflight">Play Store</a>`, 
+					theKnights);
 				airplaneGame.card = `airplane.mp4`;
 
 				let bikeGame = new Project( `Bike Racing`,
-					`https://acegikmo.com/shapes/`,
-					undefined, `bike racing game for mobile devices<br>
-					<a href="link">Play Store</a>` );
+					``,
+					undefined, 
+					`bike racing game for mobile devices<br>
+					<a href="https://play.google.com/store/apps/details?id=com.kn.trafficracer.bikeracegames">Play Store</a>`, 
+					mobify);
 				bikeGame.card = `bike_racing.gif`;
 
 				let chessTimer = new Project( `Chess Timer App`,
-					'link.to.chesstimer',
-					`2020`, 
-					`A minimalistic chess timer app` );
+					'',
+					undefined, 
+					`minimalistic chess timer app<br>
+					<a href="https://play.google.com/store/apps/details?id=com.EventHorizonStudios.SimpleChessTimer">Play Store</a>` );
 				chessTimer.card = 'ct-1.png';
 
-				let asteroid = new Project( `Asteroids Belt`,
-					'link',
-					`2021`, 
-					`Asteroid game description` );
+				let asteroid = new Project( ``,
+					'https://lucius-47.itch.io/asteroids-belt',
+					undefined, 
+					`` );
 				asteroid.card = 'ab-1.png';
 
-				let cardsGame = new Project( `Cards Matching Game`, 
-					`https://www.researchgate.net/`,
-					`2021`, 
-					`description` );
+				let cardsGame = new Project( ``, 
+					`https://play.google.com/store/apps/details?id=com.EventHorizonDevelopers.KardGame`,
+					undefined, 
+					`` );
 				cardsGame.card = 'mc-3.png';
 
-				let iceCreamGame = new Project('Ice Cream Stall Game', 
-					'link', 
-					'2020',
-					'description' );
+				let iceCreamGame = new Project('', 
+					'https://lucius-47.itch.io/ice-cream-game', 
+					undefined,
+					'' );
 				iceCreamGame.card = 'ice_cream.mp4';
 
 				let spitfireSim = new Project('Propeller aircraft simulator', 
-					'link', 
-					'2020',
-					'description' );
+					'', 
+					undefined,
+					'physics-based aircraft simulation and contol' );
 				spitfireSim.card = 'spitfire.mp4';
 
-				let topDownShooter = new Project('Top Down Shooter', 
-					'link', 
-					'2020',
-					'description' );
+				let topDownShooter = new Project('', 
+					'', 
+					undefined,
+					'top-down shooter game with procedurally generated levels' );
 				topDownShooter.card = 'topdown_shooter.mp4';
 
-				let stealthGame = new Project('Top Down Shooter', 
-					'link', 
-					'2020',
-					'description' );
+				let stealthGame = new Project('', 
+					'', 
+					undefined,
+					'' );
 				stealthGame.card = 'stealth_game.mp4';
 
 
@@ -230,7 +251,7 @@
 				document.getElementById("projects-current").innerHTML =
 				toRowHtml(
 					toColumnHtml(airplaneGame, asteroid, chessTimer) + 
-					toColumnHtml(cardsGame, iceCreamGame, spitfireSim) + 
+					toColumnHtml(spitfireSim, cardsGame, iceCreamGame) + 
 					toColumnHtml(bikeGame, topDownShooter, stealthGame)
 					);
 
@@ -244,7 +265,7 @@
 			<div class="middle">
 				<div class="inner">
 					<!-- <div class="profile_pic"><img src="images/muneeb.jpg" width="300" height="300"></div> -->
-					<div><a href="/index.html" style="padding:10px; background-color: pink">Home</a></div>
+					<div style="display: flex;"><a href="/index.html" style="padding: 5px; background-color: pink">Home</a></div>
 					<span class="name">Muneeb's Portfolio</span><br>
 					<span class="name_sub">Stuff I have worked on both personally and professionally</span><br><!--Was commented-->
 					
