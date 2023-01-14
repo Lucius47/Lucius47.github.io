@@ -163,6 +163,11 @@ body {
       width: 256px;
       padding: 0.4em;
   }
+
+  .proj-container-vertical:hover{
+    background-color: #002bff;
+  }
+
   @media screen and (max-device-width: 480px){
     .proj-container-vertical{
       width: 80%;
