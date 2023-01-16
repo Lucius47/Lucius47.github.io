@@ -22,10 +22,11 @@ body {
   
   @media screen and (max-device-width: 480px){
     body{
-      font-size: 3em;	
+      font-size: 2em;
       margin-top: 0.4em;
     }
   }
+
   .name {
     font-family: Cormorant;
     font-variant: small-caps;
@@ -33,11 +34,13 @@ body {
     font-weight: 100;
     color: #f15;
   }
+
   .name_sub {
     font-size: 1em;
     font-weight: 200;
     color: #f15;
   }
+  
   .desc {
     font-size: 0.9em;
   }
@@ -90,13 +93,16 @@ body {
     margin-right: 8px;
     width: 32px;
     height: 32px;
-    filter: drop-shadow(1px 3px 1px #15202b33 );
+    /* filter: drop-shadow(1px 3px 1px #15202b33 ); */
+    filter: drop-shadow(2px 3px 2px black);
   }
-  @media (prefers-color-scheme: dark) {
+
+  /* @media (prefers-color-scheme: dark) {
     .social_icon {
       filter: drop-shadow(2px 3px 2px black);
     }
-  }
+  } */
+  
   @media screen and (max-device-width: 480px){
     .social_icon{
       width: 64px;
@@ -178,7 +184,7 @@ body {
 
   @media screen and (max-device-width: 480px){
     .proj-container-vertical{
-      width: 80%;
+      width: 90%;
       padding-bottom: 1em;
     }
   }
