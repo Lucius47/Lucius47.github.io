@@ -13,8 +13,8 @@
 	</script>
 
 
-		<meta name="viewport">
-    	<meta charset="utf-8" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     	<title>Muneeb's Stuff</title>
     	<link rel="shortcut icon" type="image/png" href="images/heart.png"/>
 		<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -188,8 +188,9 @@
 				
 				// name, link, timespan, desc, company  • 
 
-				let airplaneGame = new Project( `City Pilot Flight`,
-					``,
+				let airplaneGame = new Project( 
+					`City Pilot Flight`,
+					undefined,
 					undefined, 
 					`an arcade airplane simulation game for mobile devices<br>
 					<a href="https://play.google.com/store/apps/details?id=com.volcano.city.airplane.pilotflight">Play Store</a>`, 
@@ -198,7 +199,7 @@
 				airplaneGame.altText = `airplane game`;
 
 				let bikeGame = new Project( `Bike Racing`,
-					``,
+					undefined,
 					undefined, 
 					`bike racing game for mobile devices<br>
 					<a href="https://play.google.com/store/apps/details?id=com.kn.trafficracer.bikeracegames">Play Store</a>`, 
@@ -207,7 +208,7 @@
 				bikeGame.altText = `bike racing game`;
 
 				let chessTimer = new Project( `Chess Timer App`,
-					'',
+					undefined,
 					undefined, 
 					`minimalistic chess timer app<br>
 					<a href="https://play.google.com/store/apps/details?id=com.EventHorizonStudios.SimpleChessTimer">Play Store</a>` );
@@ -236,21 +237,21 @@
 				iceCreamGame.altText = 'ice cream stall game';
 
 				let spitfireSim = new Project('Propeller aircraft simulator', 
-					'', 
+					undefined, 
 					undefined,
 					'physics-based aircraft simulation and contol' );
 				spitfireSim.card = 'spitfire.mp4';
 				spitfireSim.altText = 'spitfire simulation demo';
 
 				let topDownShooter = new Project('', 
-					'', 
+					undefined, 
 					undefined,
 					'top-down shooter game with procedurally generated levels' );
 				topDownShooter.card = 'topdown_shooter.mp4';
 				topDownShooter.altText = 'topdown shooter game demo';
 
 				let stealthGame = new Project('', 
-					'', 
+					undefined, 
 					undefined,
 					'' );
 				stealthGame.card = 'stealth_game.mp4';
