@@ -102,11 +102,11 @@
 					{
 						if (this.link == undefined || this.link == '')
 						{
-							return `<div class="proj-card"><img src="./images/projectcards/${this.card}"></div>`;
+							return `<div class="proj-card"><img src="./images/projectcards/${this.card}" alt="${this.altText}"></div>`;
 						}
 						else
 						{
-							return `<div class="proj-card"><a href="${this.link}" target="_blank" rel="noopener noreferrer"><img src="./images/projectcards/${this.card}"></a></div>`;
+							return `<div class="proj-card"><a href="${this.link}" target="_blank" rel="noopener noreferrer"><img src="./images/projectcards/${this.card}" alt="${this.altText}"></a></div>`;
 						}
 					}
 
@@ -195,6 +195,7 @@
 					<a href="https://play.google.com/store/apps/details?id=com.volcano.city.airplane.pilotflight">Play Store</a>`, 
 					theKnights);
 				airplaneGame.card = `airplane.mp4`;
+				airplaneGame.altText = `airplane game`;
 
 				let bikeGame = new Project( `Bike Racing`,
 					``,
@@ -203,6 +204,7 @@
 					<a href="https://play.google.com/store/apps/details?id=com.kn.trafficracer.bikeracegames">Play Store</a>`, 
 					mobify);
 				bikeGame.card = `bike_racing.gif`;
+				bikeGame.altText = `bike racing game`;
 
 				let chessTimer = new Project( `Chess Timer App`,
 					'',
@@ -210,42 +212,49 @@
 					`minimalistic chess timer app<br>
 					<a href="https://play.google.com/store/apps/details?id=com.EventHorizonStudios.SimpleChessTimer">Play Store</a>` );
 				chessTimer.card = 'ct-1.jpg';
+				chessTimer.altText = 'chess timer app';
 
 				let asteroid = new Project( ``,
 					'https://lucius-47.itch.io/asteroids-belt',
 					undefined, 
 					`` );
 				asteroid.card = 'ab-1.jpg';
+				asteroid.altText = 'asteroids game';
 
 				let cardsGame = new Project( ``, 
 					`https://play.google.com/store/apps/details?id=com.EventHorizonDevelopers.KardGame`,
 					undefined, 
 					`` );
 				cardsGame.card = 'mc-3.jpg';
+				cardsGame.altText = 'cards matching game';
 
 				let iceCreamGame = new Project('', 
 					'https://lucius-47.itch.io/ice-cream-game', 
 					undefined,
 					'' );
 				iceCreamGame.card = 'ice_cream.mp4';
+				iceCreamGame.altText = 'ice cream stall game';
 
 				let spitfireSim = new Project('Propeller aircraft simulator', 
 					'', 
 					undefined,
 					'physics-based aircraft simulation and contol' );
 				spitfireSim.card = 'spitfire.mp4';
+				spitfireSim.altText = 'spitfire simulation demo';
 
 				let topDownShooter = new Project('', 
 					'', 
 					undefined,
 					'top-down shooter game with procedurally generated levels' );
 				topDownShooter.card = 'topdown_shooter.mp4';
+				topDownShooter.altText = 'topdown shooter game demo';
 
 				let stealthGame = new Project('', 
 					'', 
 					undefined,
 					'' );
 				stealthGame.card = 'stealth_game.mp4';
+				stealthGame.altText = 'stealth game demo';
 
 
 
