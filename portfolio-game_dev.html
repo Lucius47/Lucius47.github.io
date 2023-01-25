@@ -165,12 +165,14 @@
 							</div>`;
 				}
 
-				function toColumnHtml(proj1, proj2 = '', proj3 = '')
+				function toColumnHtml(projects)
 				{
+					asd = '';
+					projects.forEach(element => {
+						asd += element;
+					});
 					return `<div class="column">
-								${proj1}
-								${proj2}
-								${proj3}
+								${asd}
 							</div>`;
 				}
 
@@ -257,13 +259,27 @@
 				stealthGame.card = 'stealth_game.mp4';
 				stealthGame.altText = 'stealth game demo';
 
+				let vrDemos = new Project('Demos of some VR prototypes', 
+					undefined, 
+					undefined,
+					'' );
+				vrDemos.card = 'vr_demos.mp4';
+				vrDemos.altText = 'demos of VR projects';
+
+				let hcDemo = new Project('', 
+					undefined, 
+					undefined,
+					'' );
+				vrDemos.card = 'hc_demo.mp4';
+				vrDemos.altText = 'demo of a hyper-casual game';
+
 
 
 				document.getElementById("projects-current").innerHTML =
 				toRowHtml(
-					toColumnHtml(airplaneGame, asteroid, chessTimer) + 
-					toColumnHtml(spitfireSim, cardsGame, iceCreamGame) + 
-					toColumnHtml(bikeGame, topDownShooter, stealthGame)
+					toColumnHtml([airplaneGame, asteroid, chessTimer]) + 
+					toColumnHtml([spitfireSim, vrDemos, cardsGame, iceCreamGame]) + 
+					toColumnHtml([bikeGame, topDownShooter, stealthGame])
 					);
 
 			}
