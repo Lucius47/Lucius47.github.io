@@ -6,5 +6,5 @@
     "MinNumberOfPlayers": 1,
     "NumOfAIHunters": 3,
     "GainingMoneyTimeInterval": 1,
-    "MoneyPerInterval": 5,
+    "MoneyPerInterval": 5
 }
