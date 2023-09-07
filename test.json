@@ -1,10 +1,13 @@
 {
-    "GameRestartWaitTime": 5000,
     "MatchMakingTime": 30,
     "TakePositionTime": 10,
     "GameplayTime": 30,
-    "MinNumberOfPlayers": 2,
-    "NumOfAIHunters": 3,
+    "GameRestartWaitTime": 5000,
+    "MaxPlayersInRoom": 10,
+    "EscapeesToHuntersRatio": {
+        "x": 1,
+        "y": 1
+    },
     "GainingMoneyTimeInterval": 1,
     "MoneyPerInterval": 5
 }
