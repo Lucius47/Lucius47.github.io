@@ -1,0 +1,8 @@
+{
+    "GameRestartWaitTime": 5000,
+    "CountDownTime": 10,
+    "TakePositionTime": 10,
+    "GameplayTime": 30,
+    "MinNumberOfPlayers": 2,
+    "NumOfAIHunters": 3
+}
