@@ -1,6 +1,6 @@
 {
     "GameRestartWaitTime": 5000,
-    "CountDownTime": 10,
+    "MatchMakingTime": 120,
     "TakePositionTime": 10,
     "GameplayTime": 30,
     "MinNumberOfPlayers": 1,
