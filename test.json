@@ -3,7 +3,7 @@
     "TakePositionTime": 10,
     "GameplayTime": 30,
     "GameRestartWaitTime": 5000,
-    "MaxPlayersInRoom": 2,
+    "MaxPlayersInRoom": 8,
     "EscapeesToHuntersRatio": {
         "x": 1,
         "y": 1
