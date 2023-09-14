@@ -221,6 +221,7 @@
 				// let animal = new Company( `ANIMAL`, `https://animalmade.com/` );
 				let uetp = new Company( `UET Peshawar`, `https://www.uetpeshawar.edu.pk/`, "from");
 				let mobify = new Company( `Mobify`, `https://mobify.tech/`, "at");
+				let nbi = new Company( `NoBorderz Innovations`, `https://www.noborderz.com/`, "at");
 
 				
 				
@@ -269,11 +270,22 @@
 				// name, link, timespan, desc, company
 				let university = new Project( `Bachelor of Science in Mechanical Engineerng`,
 					undefined,
-					`2017-2021`, `machine design, control systems, robotics and automation, 3D modelling and analyis, microcontrollers, programming`, uetp);
+					`2017-2021`, 
+					`machine design, control systems, robotics and automation, 3D modelling and analyis, microcontrollers, programming`, 
+					uetp);
 
 				let mobifyJob = new Project( `Unity Developer`,
 					undefined,
-					`2021-now`, `level design, new features, and optimization of existing games. Developed new projects, implemented ads, analytics, IAP, and other third party plugins`, mobify);
+					`dec 2021 - may 2023`, 
+					`level design, new features, and optimization of existing games. Developed new projects, implemented ads, analytics, IAP, and other third party plugins`, 
+					mobify);
+				
+				let nbiJob = new Project( 'Unity 3D Developer',
+					undefined,
+					'june 2023 - now',
+					'developing mini games inside a multiverse',
+					nbi);
+
 				// let mathfs = new Project( `Mathfs`,
 				// 	`https://github.com/FreyaHolmer/Mathfs`,
 				// 	`2020-now`, `an open source extended math library for Unity, containing intersection tests, trajectory helpers,
@@ -387,6 +399,7 @@
 				document.getElementById("projects-side").innerHTML =
 				// triSolver +
 				// flowstorm + 
+				nbiJob +
 				mobifyJob + 
 				university;
 
