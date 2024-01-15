@@ -177,15 +177,11 @@
 								</div>
 							</div>`;
 						}
-						
-
 			}
-
 
 			window.onload = function(){
 
 				let container = document.getElementById(`container`);
-
 
 				function socialIcon( site, url, hover = `` ){
 					return `<div class="tooltip">
@@ -210,63 +206,21 @@
 				socialIcon( 'Patreon', 'https://www.patreon.com/Muneeb.Shaw', `best way to support me ❤`);
 
 				// document.getElementById("email_address").innerHTML = 'email' + '@server' + '.com';
-				
 
 				// companies
-				// let neat = new Company( `Neat Corp`, `https://neatcorporation.com/` );
-				// let talawa = new Company( `Talawa Games`, `https://talawagames.com/Wp/` );
 				let teotl = new Company( `Teotl Studios`, `https://teotlstudios.com/` );
 				let valve = new Company( `Valve`, `https://www.valvesoftware.com/` );
-				// let nutsTeam = new Company( `the NUTS team`, `https://nuts.game/` );
-				// let animal = new Company( `ANIMAL`, `https://animalmade.com/` );
 				let uetp = new Company( `UET Peshawar`, `https://www.uetpeshawar.edu.pk/`, "from");
 				let mobify = new Company( `Mobify`, `https://mobify.tech/`, "at");
 				let nbi = new Company( `NoBorderz Innovations`, `https://www.noborderz.com/`, "at");
 
-				
-				
 				// let shapes = new Project( `Project with card`,
 				// 	`https://acegikmo.com/shapes/`,
 				// 	undefined, `an award-winning GPU based vector graphics library for Unity<br>
-					
 				// 	<a href="https://acegikmo.com/shapes/docs/">Documentation</a> • <a href="https://assetstore.unity.com/packages/tools/particles-effects/shapes-173167">Asset Store</a>
-					
 				// 	` );
 				// 	shapes.card = `shapes.png`;
 					
-				// 	let shapes2 = new Project( `Project with video card`,
-				// 	`https://acegikmo.com/shapes/`,
-				// 	undefined, `an award-winning GPU based vector graphics library for Unity<br>
-					
-				// 	<a href="https://acegikmo.com/shapes/docs/">Documentation</a> • <a href="https://assetstore.unity.com/packages/tools/particles-effects/shapes-173167">Asset Store</a>
-					
-				// 	` );
-				// 	shapes2.card = `spitfire.mp4`;
-					
-					
-					// let streamEmbers = new Project( `Embers of the Wilds`,
-					// 	`https://regalgoblins.fandom.com/wiki/Embers_of_the_Wilds`,
-					// 	undefined, `a live D&D campaign with<br>
-					// 	<a href="https://twitch.tv/koibu">koibu</a>,
-					// 	<a href="https://twitter.com/khyperia">khyperia</a> &
-					// 	<a href="https://twitch.tv/lusterly">lusterly</a>.<br>airing Sundays 19:00 CET/CEST at <a href="https://twitch.tv/acegikmo">twitch.tv/acegikmo</a>` );
-					// streamEmbers.card = `eow.png`;
-					
-					
-					// let courses = new Project( `Game Dev Tutorials`,
-					// 	`https://www.youtube.com/channel/UC7M-Wz4zK8oikt6ATcoTwBA`,
-					// 	undefined, `free long-form educational videos<br> 
-					
-				// 	<a href="https://www.youtube.com/playlist?list=PLImQaTpSAdsD88wprTConznD1OY1EfK_V">Math</a> • 
-				// 	<a href="https://www.youtube.com/watch?v=6xs0Saff940">Procedural Geometry</a><br>
-				// 	<a href="https://www.youtube.com/playlist?list=PLImQaTpSAdsCnJon-Eir92SZMl7tPBS4Z">Shaders</a> • 
-				// 	<a href="https://www.youtube.com/playlist?list=PLImQaTpSAdsBKEkUvKxw6p0tpwl7ylw0d">Tool Dev</a>
-				
-				// 	` );
-				// // // mini tutorials on <a href="https://twitter.com/FreyaHolmer/status/1381256235211706375">Surface normals</a> • <a href="https://twitter.com/FreyaHolmer/status/1059137805912338434">Selection outline shaders</a> • <a href="https://twitter.com/FreyaHolmer/status/1107042443629940737">Rocket flame shader</a>
-				// courses.card = `courses.png`;
-				
-				
 				// name, link, timespan, desc, company
 				let university = new Project( `Bachelor of Science in Mechanical Engineerng`,
 					undefined,
@@ -280,163 +234,24 @@
 					`level design, new features, and optimization of existing games. Developed new projects, implemented ads, analytics, IAP, and other third party plugins`, 
 					mobify);
 				
-				let nbiJob = new Project( 'Unity 3D Developer',
+				let nbiJob = new Project( 'Software Engineer',
 					undefined,
 					'2023-now',
-					'developing mini games inside a multiverse',
+					'multiverse platform for desktop, web, and mobile devices',
 					nbi);
-
-				// let mathfs = new Project( `Mathfs`,
-				// 	`https://github.com/FreyaHolmer/Mathfs`,
-				// 	`2020-now`, `an open source extended math library for Unity, containing intersection tests, trajectory helpers,
-				// 	trigonometry helpers, and much more!` );
-				// let flowstorm = new Project( `Flowstorm`,
-				// 	`https://twitter.com/freyaholmer/status/1187810005011050498`,
-				// 	`2018-now`, `a racing game I work on every now and then while streaming on twitch! think of it like trackmania meets lunar lander meets super meat boy` );
-				// let triSolver = new Project( `Triangle Solver`,
-				// 	`https://acegikmo.com/trianglesolver/`,
-				// 	`2021`, `interactive right-angle and general triangle solver` );
-				// //flowstorm.card = `flowstorm.gif`;
-
-				// let mathAnimations = new Project( `Math Animations`,
-				// 	`./mathvis/index.html`,
-				// 	undefined, `various math animations & visualizations` );
-				// mathAnimations.card = `mathanims.gif`;
-				
-
-				// let nuts = new Project( `NUTS`, 
-				// 	`https://store.steampowered.com/app/768450/NUTS/`,
-				// 	`2020-2021`, `as a freelance tech artist`, nutsTeam );
-				// let rawmen = new Project( `RAWMEN`, 
-				// 	`https://rawmengame.com/`,
-				// 	`2020`, `as a freelance tech artist`, animal );
-				// let budgetCuts2 = new Project( `Budget Cuts 2`,
-				// 	`https://store.steampowered.com/app/1092430/Budget_Cuts_2_Mission_Insolvency/`,
-				// 	`2018-2019`, `as a 3D artist & tech artist`, neat ); // the sequel to the first
-				// let budgetCuts = new Project( `Budget Cuts`,
-				// 	`https://store.steampowered.com/app/400940/Budget_Cuts/`,
-				// 	`2016-2018`, `as co-founder of Neat Corp, designer, coder, 3D artist, tool dev & tech artist`, [neat, valve] );
-				// let shaderForge = new Project( `Shader Forge`,
-				// 	`https://github.com/FreyaHolmer/ShaderForge`,
-				// 	`2014-2018`, `a node-based shader editor for Unity` );
-				// let unmech = new Project( `Unmechanical`,
-				// 	`https://store.steampowered.com/app/211180/Unmechanical/`,
-				// 	`2010-2012`, `as a 3D artist & tech artist`, talawa ); // a puzzle-adventure game
-				// let theBall = new Project( `The Ball: Portal 2 DLC`, 
-				// 	`https://store.steampowered.com/app/35460/The_Ball/`,
-				// 	`2011`, `as a level designer & artist for Portal-themed levels as part of <a href="https://en.wikipedia.org/wiki/Potato_Sack">Valve's Portal 2 ARG</a>`, [teotl, valve] );
-
-
 
 				let uniFyp = new Project( `Design, Simulation, and Testing of UAV based packages delivery system`, 
 					`https://www.researchgate.net/publication/355023499_Design_and_Fabrication_of_a_Quadcopter_Delivery_Drone`,
 					`2021`, `as a final year project, designed, moddeled, and fabricated a quadcopter. Designed a system for GPS based packages delivery.`, [new Company('', '', ''), uetp] );
 
-
-
-				// let courseShaders = new Project( `Shaders`,
-				// 	`https://www.youtube.com/playlist?list=PLImQaTpSAdsCnJon-Eir92SZMl7tPBS4Z`,
-				// 	``, `how to write shaders, in 3 parts` );
-				// let courseMath = new Project( `Math`,
-				// 	`https://www.youtube.com/playlist?list=PLImQaTpSAdsD88wprTConznD1OY1EfK_V`,
-				// 	``, `the essential math for game development, in 4 parts` );
-				// let courseToolDev = new Project( `Tool Dev`,
-				// 	`https://www.youtube.com/playlist?list=PLImQaTpSAdsBKEkUvKxw6p0tpwl7ylw0d`,
-				// 	``, `developing editor tools in Unity, in 4 parts` );
-				// let courseProcGen = new Project( `Procedural Geometry`,
-				// 	`https://www.youtube.com/watch?v=6xs0Saff940`,
-				// 	``, `generating meshes from code` );
-
-				// let interHMS = new Project( `Handmade Seattle`,
-				// 	`https://vimeo.com/482361448`,
-				// 	`2020 Nov`, `interview with Abner Coimbre on shaders, going indie, and more` );
-				// let interHansel = new Project( `Hanselminutes`,
-				// 	`https://hanselminutes.simplecast.com/episodes/visualizing-math-with-freya-holmer-Ua6SmME1`,
-				// 	`2020 Jan`, `interview with Scott Hanselman on visualizing math` );
-
-
-				// // conferences
-				// let gdc18 = new Company( `GDC 2018`, `https://gdconf.com/`, `at` );
-				// let indiecadeEurope19 = new Company( `IndieCade Europe 2019`, `https://indiecade-europe.eu/en`, `at` );
-				// let glitchcon18 = new Company( `GlitchCon 2018`, `https://www.glitchcon.mn/`, `at` );
-				// let unite14 = new Company( `Unite 2014`, `https://unity.com/events/unite`, `at` );
-				// let unite15 = new Company( `Unite 2015`, `https://unity.com/events/unite`, `at` );
-
-
-				// let talkLerp = new Project( `The simple yet powerful math we don't talk about`,
-				// 	`https://www.youtube.com/watch?v=R6UB7mVO3fY&t=214s`,
-				// 	`2019 Aug`, `a talk on the hidden powers of Lerp and InverseLerp`, indiecadeEurope19 );
-				// let talkGlitchCon = new Project( `GlitchCon Keynote`, 
-				// 	`https://www.youtube.com/watch?v=Ybc0QzTgSIk`,
-				// 	`2018 Aug`, `a talk about mental health, motivation and learning`, glitchcon18 );
-				// let talkPortal = new Project( `The portal locomotion of Budget Cuts`,
-				// 	`https://www.youtube.com/watch?v=f786ak3GKQo`,
-				// 	`2018 Mar`,
-				// 	`a talk on the design and implementation of the portal in Budget Cuts`, gdc18 );
-				// let talkProcGen = new Project( `Spline-based procedural geometry`,
-				// 	`https://www.youtube.com/watch?v=6xs0Saff940`,
-				// 	`2015 Aug`, `a talk on how to generate meshes along splines 
-				// 	[<a href="https://docs.google.com/presentation/d/10XjxscVrm5LprOmG-VB2DltVyQ_QygD26N6XC2iap2A/edit#slide=id.p">slides</a>]`, unite15 );
-				// let talkShaderForge = new Project( `Shader Forge - making Shaders accessible to artists`,
-				// 	`https://www.youtube.com/watch?v=WMHpBpjWUlY`,
-				// 	`2014 Aug`, `a talk on why and how I made Shader Forge`, unite14 );
-
-
-
-				
-				// let streamDDR = new Project( `Dance Dance Revolution workout`,
-				// 	`https://twitter.com/FreyaHolmer/status/1380899033208782848`,
-				// 	undefined,
-				// 	`I play my DDR/StepMania workouts on stream, usually playing doubles (playing on two dance pads)`);
-
-
-				// document.getElementById("projects-current").innerHTML =
-				// shapes + shapes2;
-				// mathAnimations +
-				// courses +
-				// streamEmbers
-
 				document.getElementById("projects-side").innerHTML =
-				// triSolver +
-				// flowstorm + 
 				nbiJob +
 				mobifyJob + 
 				university;
 
 				document.getElementById("projects-past").innerHTML =
-				// nuts +
-				// rawmen +
-				// budgetCuts2 +
-				// budgetCuts +
-				// shaderForge +
-				// unmech +
 				uniFyp;
-
-				
-
-				// document.getElementById("projects-public-speaking").innerHTML =
-				// interHMS +
-				// interHansel +
-				// talkLerp +
-				// talkGlitchCon +
-				// talkPortal +
-				// talkProcGen +
-				// talkShaderForge;
-
-
-				// //	Illustration • Animations • Music<br>
-				// //	Quixel • Avalanche Studios<br>
-
-				// // category( `Streaming` ) +
-				// // streamDDR;
-				// // <h3>interactive</h3>
-				// // 	<a href="https://acegikmo.com/trianglesolver/">Triangle solver</a><br>
-				// // 	<a href="https://acegikmo.com/bezier/">Bezier curve explorer</a><br>
-				
-				// // <a href="https://acegikmo.medium.com/the-ever-so-lovely-b%C3%A9zier-curve-eb27514da3bf">Bezier curve construction</a><br>
-
 			}
-
 		</script>
 
 	</head>
