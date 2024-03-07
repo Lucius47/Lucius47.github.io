@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-TBC25386BG"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'G-TBC25386BG');
+	</script>
+
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=0.5, shrink-to-fit=no">
+    	<title>Muneeb's Stuff</title>
+    	<link rel="shortcut icon" type="image/png" href="images/heart.png"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+    	<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
+    	<link href="styles.css" rel="stylesheet">
+
+    	<!-- <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script> -->
+
+		<script>
+
+			class Company{
+				constructor(name, link, joiner = "by" ){
+					this.name = name;
+					this.link = link;
+					this.joiner = joiner;
+				}
+				toString(){
+					return `<a href="${this.link}" target="_blank" rel="noopener noreferrer">${this.name}</a>`
+				}
+			}
+
+			class Project{
+
+				constructor( name, link, timespan, desc, company ){
+					this.name = name;
+					this.link = link;
+					this.timespan = timespan;
+					this.desc = desc;
+					this.company = company;
+				}
+
+
+				companyHtml(){
+					if(this.company == undefined)
+						return ``;
+
+					let c0 = Array.isArray(this.company) ? this.company[0] : this.company;
+
+					let s = `<div class="company">${c0.joiner} `;
+					s += c0;
+					if( Array.isArray(this.company) ){
+						s += ` in cooperation with `;
+						s += this.company[1];
+					}
+					s += `</div>`;
+					return s;
+				}
+
+				descHtml(){
+					if( this.desc == `` || this.desc == undefined )
+						return ``;
+
+					let str = `<div class="proj-desc">${this.desc}</div>`;
+					if(this.company != undefined)
+						return `${str}`;
+					return str;
+				}
+
+				hasImageCard(){
+					return this.card != undefined;
+				}
+
+
+				descTimespan(){
+					if( this.hasImageCard() )
+						return ``; // no timestamp for image cards
+					return `<div class="timespan">${this.timespan == undefined ? `` : this.timespan}</div>`;
+				}
+				imgCardHtml(){
+					if(this.card == undefined)
+						return ``;
+
+					if (this.card.endsWith(".mp4"))
+					{
+						if (this.link == undefined || this.link == '')
+						{
+							return `<div class="proj-card"><video autoplay playsinline loop><source src="./images/projectcards/${this.card}"></video></div>`;
+						}
+						else
+						{
+							return `<div class="proj-card"><a href="${this.link}" target="_blank" rel="noopener noreferrer"><video autoplay playsinline loop><source src="./images/projectcards/${this.card}"></video></a></div>`;
+						}
+					}
+					else
+					{
+						if (this.link == undefined || this.link == '')
+						{
+							return `<div class="proj-card"><img src="./images/projectcards/${this.card}" alt="${this.altText}"></div>`;
+						}
+						else
+						{
+							return `<div class="proj-card"><a href="${this.link}" target="_blank" rel="noopener noreferrer"><img src="./images/projectcards/${this.card}" alt="${this.altText}"></a></div>`;
+						}
+					}
+
+				}
+				containerClass(){
+					if(this.card == undefined)
+						return `proj-container`;
+					return `proj-container-vertical`;
+				}
+
+				containerTitleClass(){
+					if(this.card == undefined)
+						return `proj-title"`;
+					return `proj-title-centered`;
+				}
+
+				nameAndLinkHtml()
+				{
+					if (this.link == undefined || this.link == '')
+					{
+						return `${this.name}</div>`
+					}
+					else
+					{
+						return `<a href="${this.link}" target="_blank" rel="noopener noreferrer">${this.name}</a></div>`;
+					}
+				}
+
+				toString(){
+
+					return `<div class="${this.containerClass()}">
+								${this.imgCardHtml()}
+								${this.descTimespan()}
+								<div class="proj-right">
+									<div class="${this.containerTitleClass()}">${this.nameAndLinkHtml()}
+									${this.companyHtml()}
+									${this.descHtml()}
+								</div>
+							</div>`;
+				}
+
+
+			}
+
+
+			window.onload = function(){
+
+				let container = document.getElementById(`container`);
+
+
+				function socialIcon( site, url, hover = `` ){
+					return `<div class="tooltip">
+								<a href="${url}" target="_blank" rel="noopener noreferrer"><img class="social_icon" src="images/logo_${site.toLowerCase()}.png" alt="${site}">
+									<div class="tooltiptext">${hover}</div>
+								</a>
+							</div>`;
+				}
+
+				function toColumnHtml(projects)
+				{
+					asd = '';
+					projects.forEach(element => {
+						asd += element;
+					});
+					return `<div class="column">
+								${asd}
+							</div>`;
+				}
+
+				function toRowHtml(column)
+				{
+					return `<div class="row">${column}</div>`;
+				}
+				
+
+				// companies
+				let mobify = new Company( `Mobify`, `https://mobify.tech/`, "at");
+				let theKnights = new Company( `The Knights`, `https://mobify.tech/`, "at");
+				
+				
+				
+				// name, link, timespan, desc, company  • 
+
+				let airplaneGame = new Project( 
+					`City Pilot Flight`,
+					undefined,
+					undefined, 
+					`an arcade airplane simulation game for mobile devices<br>
+					<a href="https://play.google.com/store/apps/details?id=com.volcano.city.airplane.pilotflight">Play Store</a>`, 
+					theKnights);
+				airplaneGame.card = `airplane.mp4`;
+				airplaneGame.altText = `airplane game`;
+
+				let bikeGame = new Project( `Bike Racing`,
+					undefined,
+					undefined, 
+					`bike racing game for mobile devices<br>
+					<a href="https://play.google.com/store/apps/details?id=com.kn.trafficracer.bikeracegames">Play Store</a>`, 
+					mobify);
+				bikeGame.card = `bike_racing.gif`;
+				bikeGame.altText = `bike racing game`;
+
+				let chessTimer = new Project( `Chess Timer App`,
+					undefined,
+					undefined, 
+					`minimalistic chess timer app<br>
+					<a href="https://play.google.com/store/apps/details?id=com.EventHorizonStudios.SimpleChessTimer">Play Store</a>` );
+				chessTimer.card = 'ct-1.jpg';
+				chessTimer.altText = 'chess timer app';
+
+				let asteroid = new Project( ``,
+					'https://lucius-47.itch.io/asteroids-belt',
+					undefined, 
+					`` );
+				asteroid.card = 'ab-1.jpg';
+				asteroid.altText = 'asteroids game';
+
+				let cardsGame = new Project( ``, 
+					`https://play.google.com/store/apps/details?id=com.EventHorizonDevelopers.KardGame`,
+					undefined, 
+					`` );
+				cardsGame.card = 'mc-3.jpg';
+				cardsGame.altText = 'cards matching game';
+
+				let iceCreamGame = new Project('', 
+					'https://lucius-47.itch.io/ice-cream-game', 
+					undefined,
+					'' );
+				iceCreamGame.card = 'ice_cream.mp4';
+				iceCreamGame.altText = 'ice cream stall game';
+
+				let spitfireSim = new Project('Propeller aircraft simulator', 
+					undefined, 
+					undefined,
+					'physics-based aircraft simulation and contol' );
+				spitfireSim.card = 'spitfire.mp4';
+				spitfireSim.altText = 'spitfire simulation demo';
+
+				let topDownShooter = new Project('', 
+					undefined, 
+					undefined,
+					'top-down shooter game with procedurally generated levels' );
+				topDownShooter.card = 'topdown_shooter.mp4';
+				topDownShooter.altText = 'topdown shooter game demo';
+
+				let stealthGame = new Project('', 
+					undefined, 
+					undefined,
+					'' );
+				stealthGame.card = 'stealth_game.mp4';
+				stealthGame.altText = 'stealth game demo';
+
+				let vrDemos = new Project('Demos of some VR prototypes', 
+					undefined, 
+					undefined,
+					'' );
+				vrDemos.card = 'vr_demos.mp4';
+				vrDemos.altText = 'demos of VR projects';
+
+				let hcDemo = new Project('', 
+					undefined, 
+					undefined,
+					'' );
+				vrDemos.card = 'hc_demo.mp4';
+				vrDemos.altText = 'demo of a hyper-casual game';
+
+
+
+				document.getElementById("projects-current").innerHTML =
+				toRowHtml(
+					toColumnHtml([airplaneGame, asteroid, chessTimer]) + 
+					toColumnHtml([spitfireSim, vrDemos, cardsGame, iceCreamGame]) + 
+					toColumnHtml([bikeGame, topDownShooter, stealthGame])
+					);
+
+			}
+
+			</script>
+
+	</head>
+	<body>
+		<div class="outer">
+			<div class="middle">
+				<div class="inner">
+					<!-- <div class="profile_pic"><img src="images/muneeb.jpg" width="300" height="300"></div> -->
+					<div style="display: flex;"><a href="/index.html" style="padding: 5px; background-color: pink">Home</a></div>
+					<span class="name">Muneeb's Portfolio</span><br>
+					<span class="name_sub">Stuff I have worked on both personally and professionally</span><br><!--Was commented-->
+					
+
+
+					<!-- <div class="row proj-card"> 
+						<div class="column">
+							<div class="proj-container-vertical">
+								<video width="100%" autoplay playsinline muted loop>
+									<source src="/images/projectcards/airplane.mp4" type="video/mp4">
+								</video>
+								<div class="proj-right">
+									<div class="proj-title-centered"><a href="https://link.to">Airplane Game</a></div>
+									<div class="company">By <a href="https://mobify.tech">Mobify</a></div>
+									<div class="proj-desc">arcade airplane simulation game for Android</div>
+								</div>
+							</div>
+							<div class="proj-container-vertical">
+								<video width="100%" autoplay playsinline muted loop>
+									<source src="/images/projectcards/topdown_shooter.mp4" type="video/mp4">
+								</video>
+							</div>
+							
+							<img src="/images/projectcards/ab-1.jpg" style="width:100%">
+						</div>
+						<div class="column">
+							<video width="100%" autoplay playsinline muted loop>
+								<source src="/images/projectcards/spitfire.mp4" type="video/mp4">
+							</video>
+							<video width="100%" autoplay playsinline muted loop>
+								<source src="/images/projectcards/ice_cream.mp4" type="video/mp4">
+							</video>
+							<img src="/images/projectcards/ct-1.jpg" style="width:100%">
+						</div>  
+						<div class="column">
+							<img src="/images/projectcards/bike_racing.gif" style="width:100%">
+							<video width="100%" autoplay playsinline muted loop>
+								<source src="/images/projectcards/stealth_game.mp4" type="video/mp4">
+							</video>
+							<img src="/images/projectcards/mc-3.jpg" style="width:100%">
+						</div>
+					</div> -->
+
+
+					<h3>Projects</h3>
+					<div class="project-list-cards" id="projects-current">
+						<!-- populated by js-->
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
