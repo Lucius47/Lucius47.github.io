@@ -32,42 +32,153 @@
     <link rel="shortcut icon" type="image/png" href="/images/ME/icons8-solidworks-100.png"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
 
     <script type="text/javascript" async src="main.js"></script>
+
+	<style>
+		body {
+			font-family: 'Roboto', sans-serif;
+			background-color: #2c3e50;
+			color: #ecf0f1;
+			margin: 0;
+			padding: 20px;
+		}
+		.container {
+			max-width: 800px;
+			margin: auto;
+			background: #34495e;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		}
+		h1 {
+			text-align: center;
+			color: #ecf0f1;
+			font-size: 26px;
+			margin-bottom: 20px;
+		}
+		.certificate-list {
+			list-style: none;
+			padding: 0;
+		}
+		.certificate-item {
+			padding: 15px;
+			border-bottom: 1px solid #7f8c8d;
+			display: flex;
+			flex-direction: column;
+		}
+		.certificate-info {
+			max-width: 100%;
+		}
+		.certificate-title {
+			font-size: 20px;
+			font-weight: 500;
+			color: #ecf0f1;
+		}
+		.certificate-provider {
+			font-size: 15px;
+			color: #bdc3c7;
+			margin-top: 5px;
+		}
+		.certificate-description {
+			font-size: 14px;
+			color: #95a5a6;
+			margin: 10px 0;
+		}
+		.certificate-link {
+			text-decoration: none;
+			font-size: 15px;
+			color: #3498db;
+			margin-top: 5px;
+		}
+		.certificate-link:hover {
+			color: #2980b9;
+		}
+		.back-button {
+			display: inline-block;
+			margin-bottom: 20px;
+			padding: 10px 20px;
+			font-size: 15px;
+			color: #fff;
+			background-color: #3498db;
+			text-decoration: none;
+			border-radius: 4px;
+			transition: background-color 0.3s;
+		}
+		.back-button:hover {
+			background-color: #2980b9;
+		}
+		.module-title {
+			font-size: 15px;
+			font-weight: 500;
+			color: #ecf0f1;
+			margin-top: 12px;
+		}
+		.module-list {
+			margin: 5px 0 0;
+			padding: 0;
+			list-style: none;
+		}
+		.module-item {
+			font-size: 14px;
+			color: #bdc3c7;
+			margin: 4px 0;
+		}
+	</style>
+
 	</head>
 	<body>
-		<div class="outer">
-			<div class="middle">
-				<div class="inner">
-					<div style="display: flex; justify-content: center;">
-						<form action="/index.html">
-							<button class="cta_button" type="submit">Home</button>
-						</form>
-					</div>
-					<span class="name">Muneeb Ullah's Licences and Certificates</span><br>
-					<span class="name_sub">[page design in progress]</span><br>
-					
-					<div class="childDesc">
-						<h1>Design of Industral Piping Systems</h1>
-						<p>Specialization offered by L&T through Coursera.</p>
-						<h2>Courses:</h2>
-						<li>Single-Phase Pipe Hydraulics and Pipe Sizing</li>
-						<li>Two-Phase Pipe Hydraulics and Pipe Sizing</li>
-						<li>Pipe Material Specification</li>
-						<li>ASME B31 Series and Pipeline Construction</li>
-					</div>
-					<div class="childDesc">
-						<h1>CAESAR II Static 1</h1>
-						<p>Offered by Hexagon University.</p>
-					</div>
-					<div class="childDesc">
-						<h1>CAESAR II Fundamentals</h1>
-						<p>Offered by Hexagon University.</p>
-					</div>
 
-				</div>
-			</div>
+
+		<div class="container">
+			<a href="index.html" class="back-button">Back to Main Page</a>
+
+			<h1>Certificates and Licenses</h1>
+			<ul class="certificate-list" id="certificateList">
+				<li class="certificate-item">
+					<div class="certificate-info">
+						<div class="certificate-title">Certified Mechanical Engineer</div>
+						<div class="certificate-provider">Issued by: Pakistan Engineering Council</div>
+						<div class="certificate-description">Professional certification for mechanical engineering practices.</div>
+						<a href="https://www.pec.org.pk/" class="certificate-link" target="_blank">Verify</a>
+					</div>
+				</li>
+	
+				<li class="certificate-item">
+					<div class="certificate-info">
+						<div class="certificate-title">Design of Industrial Piping Systems</div>
+						<div class="certificate-provider">Issued by: L&T through Coursera</div>
+						<div class="certificate-description">Comprehensive training on industrial piping design and material selection.</div>
+						<a href="https://coursera.org/verify/specialization/D0I9Z1TLVH54" class="certificate-link" target="_blank">Verify</a>
+						<div class="module-title">Courses:</div>
+						<ul class="module-list">
+							<li class="module-item">Single-Phase Pipe Hydraulics and Pipe Sizing</li>
+							<li class="module-item">Two-Phase Pipe Hydraulics and Pipe Sizing</li>
+							<li class="module-item">Pipe Material Specification</li>
+							<li class="module-item">ASME B31 Series and Pipeline Construction</li>
+						</ul>
+					</div>
+				</li>
+	
+				<li class="certificate-item">
+					<div class="certificate-info">
+						<div class="certificate-title">CAESAR II Static 1</div>
+						<div class="certificate-provider">Issued by: Hexagon University</div>
+						<div class="certificate-description">Introduction to static analysis using CAESAR II for piping systems.</div>
+						<a href="https://universityhexagonali.360learning.com/api/certification/2441307515026627" class="certificate-link" target="_blank">Verify</a>
+					</div>
+				</li>
+	
+				<li class="certificate-item">
+					<div class="certificate-info">
+						<div class="certificate-title">CAESAR II Fundamentals</div>
+						<div class="certificate-provider">Issued by: Hexagon University</div>
+						<div class="certificate-description">Fundamental concepts of CAESAR II for piping analysis.</div>
+						<a href="https://universityhexagonali.360learning.com/api/certification/1521946266327383" class="certificate-link" target="_blank">Verify</a>
+					</div>
+				</li>
+			</ul>
+
 		</div>
 	</body>
 </html>
