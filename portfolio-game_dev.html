@@ -1,183 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Game Development</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Game Development</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		/>
 
-<style>
-  body {
-    font-family: monospace, Helvetica, sans-serif;
-    background-color:black;
-    color: white;
-    
-    a {
-      color: #ffffff;
-      text-decoration:underline;
-    }
+		<style>
+			body {
+				font-family: monospace, Helvetica, sans-serif;
+				background-color: #722f37;
+				color: #efdfbb;
 
-    a:hover {
-      color: #cccccc;
-    }
-  }
+				a {
+					color: #ffffff;
+					text-decoration: underline;
+				}
 
-  .parent {
-    display: flex;
-    flex-wrap: wrap;
-  }
+				a:hover {
+					color: #cccccc;
+				}
+			}
 
-  .childImg {
-    flex: 1 0 auto;
-    border: 1px solid black;
-    margin: 2px;
-    padding: 10px;
-    box-sizing: border-box;
-    background: rgb(48, 48, 37);
+			.parent {
+				display: flex;
+				flex-wrap: wrap;
+			}
 
-    max-width: 300px;
-    min-width: 300px;
+			.childImg {
+				flex: 1 0 auto;
+				border: 1px solid black;
+				margin: 2px;
+				padding: 10px;
+				box-sizing: border-box;
+				background: rgb(48, 48, 37);
 
-    /* make the image inside this div to be exactly in the center */
-    display: flex;
-  }
+				max-width: 300px;
+				min-width: 300px;
 
-  .childImg img {
-    margin: auto;
-    display: block;
-  }
+				/* make the image inside this div to be exactly in the center */
+				display: flex;
+			}
 
-  .childDesc {
-    flex: 1 0 auto;
-    border: 1px solid black;
-    margin: 2px;
-    padding: 10px;
-    box-sizing: border-box;
+			.childImg img {
+				margin: auto;
+				display: block;
+			}
 
-    background: rgb(48, 48, 37);
-  }
+			.childDesc {
+				flex: 1 0 auto;
+				border: 1px solid black;
+				margin: 2px;
+				padding: 10px;
+				box-sizing: border-box;
 
-  /* This media query applies styles for screens with a width of 480px or less */
-  @media (max-width: 500px) {
-    .childImg, .childDesc{
-      flex-basis: 100%; /* Children take full width on small screens */
-      max-width: 100%;
-      min-width: 100%;
-      width: 100%;
-      border: none;
-      margin: 0;
-    }
+				background: rgb(48, 48, 37);
+			}
 
-    .parent {
-      border: 1px solid black;
-      margin: 2px;
-    }
-    
-  }
-</style>
-</head>
-<body>
+			/* This media query applies styles for screens with a width of 480px or less */
+			@media (max-width: 500px) {
+				.childImg,
+				.childDesc {
+					flex-basis: 100%; /* Children take full width on small screens */
+					max-width: 100%;
+					min-width: 100%;
+					width: 100%;
+					border: none;
+					margin: 0;
+				}
 
-<div class="parent">
-  <div class="childImg">
-    <img src="/images/projectcards/xana.jpg" alt="" style="width: 280px; height: 200px;">
-  </div>
-  <div class="childDesc">
-    <h1>Xana</h1>
-    <p>Blockchain based nultiverse platform.</p>
-    <ul>
-        <li>Visit <a href="https://xana.net/">Official Website</a></li>
-    </ul>
-  </div>
-</div>
+				.parent {
+					border: 1px solid black;
+					margin: 2px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<a href="/">Home</a>
 
-<div class="parent">
-  <div class="childImg">
-    <img src="/images/projectcards/RFM.webp" alt="" style="width: 280px; height: 200px;">
-  </div>
-  <div class="childDesc">
-    <h1>Run for the Money</h1>
-    <p>Multiplayer hide and seek game based on a Korean TV show of the same name.</p>
-    <ul>
-        <li>Made inside Xana</li>
-        <li>Made using Photon Fusion 2 in dedicated server mode.</li>
-    </ul>
-  </div>
-</div>
+		<h1>My Projects</h1>
 
-<div class="parent">
-  <div class="childImg">
-    <img src="/images/projectcards/breaking-down.png" alt="" style="width: 280px; height: 200px;">
-  </div>
-  <div class="childDesc">
-    <h1>Breaking Down</h1>
-    <p>Multiplayer boxing game based on a boxing tournament of the same name.</p>
-    <ul>
-        <li>Made using Universal Fighting Engine (UFE) 2.5</li>
-        <li>Advanced features such as rollback netcode for smooth online gameplay.</li>
-        <li>Latest teaser on <a href="https://www.youtube.com/watch?v=v6q8CJKJe_c" target="_blank">YouTube</a></li>
-        <li><a href="https://www.youtube.com/watch?v=PSWE3BnISE0" target="_blank">Breaking Down Live</a></li>
-        <li><a href="https://xana.net/blog/breakingdown-no1-mma-entertainment-show-enters-the-web3-market-in-collaboration-with-xana-metaverse/" target="_blank">Blog</a></li>
-    </ul>
-  </div>
-</div>
+		<div class="parent">
+			<div class="childImg">
+				<img
+					src="/images/projectcards/xana.jpg"
+					alt=""
+					style="width: 280px; height: 200px"
+				/>
+			</div>
+			<div class="childDesc">
+				<h1>Xana</h1>
+				<p>Blockchain based nultiverse platform.</p>
+				<ul>
+					<li>
+						Visit <a href="https://xana.net/">Official Website</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-<div class="parent">
-  <div class="childImg">
-    <img src="/images/projectcards/modChess.webp" alt="" style="width: 280px; height: 200px;">
-  </div>
-  <div class="childDesc">
-    <h1>Age of Chesspires</h1>
-    <p>Classic chess with additional moves, rules, and pieces.</p>
-    <ul>
-        <li>Made using Windows Presentation Foundation (WPF) and .NET 8.0</li>
-        <li>Demo available on <a href="https://drive.google.com/file/d/184_xfQRWmCHMIIRV4wjEbBu43WjOPG0U/view?usp=sharing" target="_blank">Google Drive</a></li>
-        <li>Source code available on <a href="https://github.com/Lucius47/ModChess" target="_blank">GitHub</a></li>
-    </ul>
-  </div>
-</div>
+		<div class="parent">
+			<div class="childImg">
+				<img
+					src="/images/projectcards/RFM.webp"
+					alt=""
+					style="width: 280px; height: 200px"
+				/>
+			</div>
+			<div class="childDesc">
+				<h1>Run for the Money</h1>
+				<p>
+					Multiplayer hide and seek game based on a Korean TV show of
+					the same name.
+				</p>
+				<ul>
+					<li>Made inside Xana</li>
+					<li>
+						Made using Photon Fusion 2 in dedicated server mode.
+					</li>
+				</ul>
+			</div>
+		</div>
 
-<div class="parent">
-  <div class="childImg">
-    <img src="/images/projectcards/idle-tycoon.webp" alt="" style="width: 280px; height: 200px;">
-  </div>
-  <div class="childDesc">
-    <h1>Fashion Outlet</h1>
-    <p>Manage a store and sell fasion items. Hypercasual Idle tycoon game</p>
-    <ul>
-        <li>Made using UnityEngine</li>
-        <li>Gameplay video available on <a href="https://youtu.be/Cu_jJn__n9k" target="_blank">YouTube</a></li>
-        <li>Source code available on <a href="https://github.com/Lucius47/Idle-Tycoon" target="_blank">GitHub</a></li>
-    </ul>
-  </div>
-</div>
+		<div class="parent">
+			<div class="childImg">
+				<img
+					src="/images/projectcards/breaking-down.png"
+					alt=""
+					style="width: 280px; height: 200px"
+				/>
+			</div>
+			<div class="childDesc">
+				<h1>Breaking Down</h1>
+				<p>
+					Multiplayer boxing game based on a boxing tournament of the
+					same name.
+				</p>
+				<ul>
+					<li>Made using Universal Fighting Engine (UFE) 2.5</li>
+					<li>
+						Advanced features such as rollback netcode for smooth
+						online gameplay.
+					</li>
+					<li>
+						Latest teaser on
+						<a
+							href="https://www.youtube.com/watch?v=v6q8CJKJe_c"
+							target="_blank"
+							>YouTube</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.youtube.com/watch?v=PSWE3BnISE0"
+							target="_blank"
+							>Breaking Down Live</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://xana.net/blog/breakingdown-no1-mma-entertainment-show-enters-the-web3-market-in-collaboration-with-xana-metaverse/"
+							target="_blank"
+							>Blog</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-<div class="parent">
-  <div class="childImg">
-    <img src="/images/projectcards/math-puzzle.png" alt="" style="width: 280px; height: 200px;">
-  </div>
-  <div class="childDesc">
-    <h1>2048 Math Puzzle</h1>
-    <p>Hypercasual math puzzle game. Match blocks with exponenets of 2</p>
-    <ul>
-        <li>Made using Godot Engine</li>
-        <li>Gameplay video available on <a href="https://youtube.com" target="_blank">YouTube</a></li>
-        <li>Demo available on <a href="https://drive.google.com/" target="_blank">Google Drive</a></li>
-        <li>Source code available on <a href="https://github.com/Lucius47/2048-puzzle" target="_blank">GitHub</a></li>
-    </ul>
-  </div>
-</div>
+		<div class="parent">
+			<div class="childImg">
+				<img
+					src="/images/projectcards/modChess.webp"
+					alt=""
+					style="width: 280px; height: 200px"
+				/>
+			</div>
+			<div class="childDesc">
+				<h1>Age of Chesspires</h1>
+				<p>Classic chess with additional moves, rules, and pieces.</p>
+				<ul>
+					<li>
+						Made using Windows Presentation Foundation (WPF) and
+						.NET 8.0
+					</li>
+					<li>
+						Demo available on
+						<a
+							href="https://drive.google.com/file/d/184_xfQRWmCHMIIRV4wjEbBu43WjOPG0U/view?usp=sharing"
+							target="_blank"
+							>Google Drive</a
+						>
+					</li>
+					<li>
+						Source code available on
+						<a
+							href="https://github.com/Lucius47/ModChess"
+							target="_blank"
+							>GitHub</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
 
+		<div class="parent">
+			<div class="childImg">
+				<img
+					src="/images/projectcards/idle-tycoon.webp"
+					alt=""
+					style="width: 280px; height: 200px"
+				/>
+			</div>
+			<div class="childDesc">
+				<h1>Fashion Outlet</h1>
+				<p>
+					Manage a store and sell fasion items. Hypercasual Idle
+					tycoon game
+				</p>
+				<ul>
+					<li>Made using UnityEngine</li>
+					<li>
+						Gameplay video available on
+						<a href="https://youtu.be/Cu_jJn__n9k" target="_blank"
+							>YouTube</a
+						>
+					</li>
+					<li>
+						Source code available on
+						<a
+							href="https://github.com/Lucius47/Idle-Tycoon"
+							target="_blank"
+							>GitHub</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-<div class="parent">
-  <div class="childImg">
-    <img src="https://picsum.photos/280/200" alt="">
-  </div>
-  <div class="childDesc">
-    <h1><a href="">More Projects</a></h1>
-      
-  </div>
-</div>
+		<div class="parent">
+			<div class="childImg">
+				<img
+					src="/images/projectcards/math-puzzle.png"
+					alt=""
+					style="width: 280px; height: 200px"
+				/>
+			</div>
+			<div class="childDesc">
+				<h1>2048 Math Puzzle</h1>
+				<p>
+					Hypercasual math puzzle game. Match blocks with exponenets
+					of 2
+				</p>
+				<ul>
+					<li>Made using Godot Engine</li>
+					<li>
+						Gameplay video available on
+						<a href="https://youtube.com" target="_blank"
+							>YouTube</a
+						>
+					</li>
+					<li>
+						Demo available on
+						<a href="https://drive.google.com/" target="_blank"
+							>Google Drive</a
+						>
+					</li>
+					<li>
+						Source code available on
+						<a
+							href="https://github.com/Lucius47/2048-puzzle"
+							target="_blank"
+							>GitHub</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-</body>
+		<div class="parent">
+			<div class="childImg">
+				<img src="https://picsum.photos/280/200" alt="" />
+			</div>
+			<div class="childDesc">
+				<h1><a href="">More Projects</a></h1>
+			</div>
+		</div>
+	</body>
 </html>

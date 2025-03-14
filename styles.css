@@ -1,436 +1,454 @@
+:root {
+	--wine: #722f37;
+	--dutch-white: #efdfbb;
+	--light-almond: #eee5da;
+	--coffee: #6f4e37;
+	--ecru: #c2b280;
+}
+
 body {
-    /* background-color: #ffffff;
+	/* background-color: #ffffff;
     color: #666; */
 
-    background-color: #15202b;
-    color: #ddd;
+	background-color: var(--dutch-white);
+	color: #ddd;
 
-    font-family: "Segoe UI", sans-serif, verdana;
-    font-size: 1.2em;
-    margin: 0;
-    margin-top: 1.5em;
-  }
+	font-family: "Segoe UI", sans-serif, verdana;
+	font-size: 1.2em;
+	margin: 0;
+	margin-top: 1.5em;
+}
 
-  /* only dark mode */
-  /* @media (prefers-color-scheme: dark) {
+/* only dark mode */
+/* @media (prefers-color-scheme: dark) {
     body {
       background-color: #15202b;
       color: #ddd;
     }
   } */
 
-  
-  @media screen and (max-device-width: 480px){
-    body{
-      font-size: 2em;
-      margin-top: 0.4em;
-    }
-  }
+@media screen and (max-device-width: 480px) {
+	body {
+		font-size: 2em;
+		margin-top: 0.4em;
+	}
+}
 
-  .name {
-    font-family: Cormorant;
-    font-variant: small-caps;
-    font-size: 2em;
-    font-weight: 100;
-    color: #f15;
-  }
+.name {
+	/* font-family: Cormorant; */
+	font-family: "Roboto", sans-serif;
+	font-variant: small-caps;
+	font-size: 2em;
+	font-weight: bold;
+	color: var(--wine);
+}
 
-  .name_sub {
-    font-size: 1em;
-    font-weight: 200;
-    color: #f15;
-  }
-  
-  .desc {
-    font-size: 0.9em;
-  }
-  .outer {
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  }
-  .middle {
-    display: table-cell;
-    vertical-align: middle; 
-  }
-  .inner {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px;
-  }
-  @media screen and (max-device-width: 480px){
-    .inner{
-      max-width: 100%;
-    }
-  }
-  .main_card {
-    padding-bottom: 12px;
-    padding-top: 8px;
-    border-radius: 64px;
-  }
-  .profile_pic {
-    margin-bottom: 1em;
-  }
-  @media screen and (max-device-width: 480px){
-    .profile_pic {
-      margin-bottom: 0.1em;
-    }
-  }
-      
-  .profile_pic img {
-    display: block;
-    margin: auto;
-    border-radius: 160px;
-    overflow: hidden;
-    border-style: solid;
-    border-color: #f15;
-    border-width: 4px;
-  }
-  .social_icon {
-    margin-left: 8px;
-    margin-right: 8px;
-    width: 32px;
-    height: 32px;
-    /* filter: drop-shadow(1px 3px 1px #15202b33 ); */
-    filter: drop-shadow(2px 3px 2px black);
-  }
+/* .name_sub {
+	font-size: 1em;
+	font-weight: 200;
+	color: #f15;
+} */
 
-  /* @media (prefers-color-scheme: dark) {
+/* .desc {
+	font-size: 0.9em;
+} */
+.outer {
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+.inner {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 800px;
+}
+@media screen and (max-device-width: 480px) {
+	.inner {
+		max-width: 100%;
+	}
+}
+.main_card {
+	padding-bottom: 12px;
+	padding-top: 8px;
+	border-radius: 64px;
+}
+.profile_pic {
+	margin-bottom: 1em;
+}
+@media screen and (max-device-width: 480px) {
+	.profile_pic {
+		margin-bottom: 0.1em;
+	}
+}
+
+.profile_pic img {
+	display: block;
+	margin: auto;
+	border-radius: 160px;
+	overflow: hidden;
+	border-style: solid;
+	border-color: var(--coffee);
+	border-width: 4px;
+}
+.social_icon {
+	margin-left: 8px;
+	margin-right: 8px;
+	width: 32px;
+	height: 32px;
+	/* filter: drop-shadow(1px 3px 1px #15202b33 ); */
+	filter: drop-shadow(2px 3px 2px black);
+}
+
+/* @media (prefers-color-scheme: dark) {
     .social_icon {
       filter: drop-shadow(2px 3px 2px black);
     }
   } */
-  
-  @media screen and (max-device-width: 480px){
-    .social_icon{
-      width: 64px;
-      height: 64px;
-      margin-left: 16px;
-      margin-right: 16px;
-    }
-  }
-  .social_icons {
-    margin-top: 0.1em;
-  }
-  .email{
-    margin-top: 0.4em;
-    font-family: monospace;
-  }
-  .email-sub{
-    margin-top: 0.4em;
-    font-size: 75%;
-    font-family: monospace;
-  }
-  
-  h3{
-    margin-top: 1.3em;
-    margin-bottom: 0.4em;
-    font-family: Cormorant;
-    font-size: 1.6em;
-    font-weight: 100;
-    text-decoration: underline;
-    text-decoration-thickness: from-font;
-    text-decoration-color: #aaa;
-  }
-  h3:after{
-    content: "\00a0\00a0";	
-  }
-  h3:before{
-    content: "\00a0\00a0";
-  }
-  @media screen and (max-device-width: 480px){
-    h3{
-        margin-top: 0.6em;
-    }
-  }
-  
-  .proj-card img{
-    width: 256px;
-    border-radius: 0.4em;
-    box-shadow: 0.1em 0.1em 0.2em #0134;
-  }
-  
-  .proj-card video{
-    width: 256px;
-    border-radius: 0.4em;
-    box-shadow: 0.1em 0.1em 0.2em #0134;
-  }
-  
-  @media screen and (max-device-width: 480px){
-    .proj-card img{
-      width: 512px;
-    }
-  }
-  
-  .proj-card img:hover{
-    filter:brightness(110%);
-  }
-  
-  .proj-card video:hover{
-    filter:brightness(110%);
-  }
-  
-  .proj-container-vertical{
-    display: inline-block;
-      width: 256px;
-      padding: 0.4em;
-  }
 
-  .proj-container-vertical:hover{
-    background-color: #002bff;
-  }
+@media screen and (max-device-width: 480px) {
+	.social_icon {
+		width: 64px;
+		height: 64px;
+		margin-left: 16px;
+		margin-right: 16px;
+	}
+}
+.social_icons {
+	margin-top: 0.1em;
+}
+.email {
+	margin-top: 0.4em;
+	font-family: monospace;
+}
+.email-sub {
+	margin-top: 0.4em;
+	font-size: 75%;
+	font-family: monospace;
+}
 
-  @media screen and (max-device-width: 480px){
-    .proj-container-vertical{
-      width: 90%;
-      padding-bottom: 1em;
-    }
-  }
-  .proj-container{
-    display: flex;
-  }
-  @media screen and (max-device-width: 480px){
-    .proj-container{
-      padding-left: 1em;
-    }
-  }
-  .proj-img{
-    display: inline-block;
-    border: solid 1px #ddd;
-    border-radius: 0.25em;
-    width: 160px;
-    height: 90px;
-    flex-shrink: 0;
-  }
-  .proj-right{
-    padding: 0.3em;
-    display: block;
-    flex-grow: 1;
-    }
+h3 {
+	margin-top: 1.3em;
+	margin-bottom: 0.4em;
+	font-family: Cormorant;
+	font-size: 1.6em;
+	font-weight: 100;
+	text-decoration: underline;
+	text-decoration-thickness: from-font;
+	text-decoration-color: #aaa;
+}
+h3:after {
+	content: "\00a0\00a0";
+}
+h3:before {
+	content: "\00a0\00a0";
+}
+@media screen and (max-device-width: 480px) {
+	h3 {
+		margin-top: 0.6em;
+	}
+}
 
-  .proj-desc{
-    font-size: 0.8em;
-  }
-  .proj-title{
-    font-size: 0.9em;
-    font-weight: 500;
-    display: inline-block;
-  }
-  .proj-title-centered{
-    font-size: 0.9em;
-    font-weight: 500;
-    text-align: center;
-  }
-  .timespan{
-      color: #bbb;
-      font-size: 0.6em;
-      margin-left: 0.1em;
-      display: inline-block;
-      /* width: 4.8em; */
-      padding-right: 0.8em;
-      padding-top: 1.1em;
-      text-align: right;
-      flex-grow: 0;
-      flex-shrink: 0;
-  }
-  .company{
-    font-size: 0.7em;
-    display: inline-block;
-  }
-  a{
-    color: #ff1155;
-    text-decoration: none;
-  }
-  ul{
-    margin-top: 0.2em;
-  }
-  .project-list-cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .project-list-normal{
-    margin-bottom: 4em;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
-  
-  
-  
-  .tooltip {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Tooltip text */
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 16em;
-    background-color: #fff;
-    color: #666;
-    text-align: center;
-    padding: 0.5em 0;
-    padding-bottom: 0.8em;
-    border-radius: 6px;
-    font-size: 0.7em;
-    box-shadow: 0.1em 0.1em 0.4em #0134;
-  
-    /* Position the tooltip text - see examples below! */
-    width: 16em;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -8em; /* Use half of the width (120/2 = 60), to center the tooltip */
-    position: absolute;
-    z-index: 1;
-  }
-  .tooltip .tooltiptext::after {
-    content: " ";
-    position: absolute;
-    top: 100%; /* At the bottom of the tooltip */
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #fff transparent transparent transparent;
-  }
-  
-  @media screen and (max-device-width: 480px){
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      display: none;
-    }
-    .tooltip .tooltiptext::after {
-      visibility: hidden;
-      display: none;
-    }
-  
-  }
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
-  
-  
-  /* <for the image gallery> */
-  .row {
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
-    flex-wrap: wrap;
-    padding: 0 4px;
-  }
-  
-  /* Create three equal columns that sits next to each other */
-  .column {
-    -ms-flex: 32%; /* IE10 */
-    flex: 32%;
-    max-width: 32%;
-    padding: 20px 5px;
-  }
-  
-  .column img{
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-  }
-  
-  .column video{
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-  }
-  
-  /* Responsive layout - makes a single column-layout instead of three columns */
-  @media screen and (max-device-width: 480px) {
-    .column {
-      -ms-flex: 100%;
-      flex: 100%;
-      max-width: 100%;
-    }
-  }
-  /* </for the image gallery> */
-  
-  /* <for the CTA button> */
-  .cta_button{
-    min-height: 60px;
-    min-width: 180px;
-    /* background-color: rgb(229, 230, 232); */
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-family: 'Cormorant', arial, sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin: 5px;
-    cursor: pointer;
-    color: #fff;
-    background: black;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-  }
-  
-  .cta_button:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-  }
-  
-  .cta_button:hover:before {
-    opacity: 1;
-  }
-  
-  .cta_button:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #00778b, #c3ca00);;  
-    /* background: rgb(226, 58, 114); */
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-  }
-  
-  @media screen and (max-device-width: 480px) {
-    .cta_button{
-      min-height: 100px;
-      min-width: 300px;
-      font-size: 40px;
-      border-radius: 20px;
-    }
-  
-    .cta_button:before {
-      border-radius: 20px;
-    }
-  
-    .cta_button:after {
-      border-radius: 20px;
-    }
-  }
-  
-  @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-  }
-  /* <for the CTA button> */
+/* .proj-card img {
+	width: 256px;
+	border-radius: 0.4em;
+	box-shadow: 0.1em 0.1em 0.2em #0134;
+} */
+
+/* .proj-card video {
+	width: 256px;
+	border-radius: 0.4em;
+	box-shadow: 0.1em 0.1em 0.2em #0134;
+} */
+
+/* @media screen and (max-device-width: 480px) {
+	.proj-card img {
+		width: 512px;
+	}
+}
+
+.proj-card img:hover {
+	filter: brightness(110%);
+}
+
+.proj-card video:hover {
+	filter: brightness(110%);
+}
+
+.proj-container-vertical {
+	display: inline-block;
+	width: 256px;
+	padding: 0.4em;
+}
+
+.proj-container-vertical:hover {
+	background-color: #002bff;
+} 
+
+@media screen and (max-device-width: 480px) {
+	.proj-container-vertical {
+		width: 90%;
+		padding-bottom: 1em;
+	}
+}
+.proj-container {
+	display: flex;
+}
+@media screen and (max-device-width: 480px) {
+	.proj-container {
+		padding-left: 1em;
+	}
+}
+.proj-img {
+	display: inline-block;
+	border: solid 1px #ddd;
+	border-radius: 0.25em;
+	width: 160px;
+	height: 90px;
+	flex-shrink: 0;
+}
+.proj-right {
+	padding: 0.3em;
+	display: block;
+	flex-grow: 1;
+}
+
+.proj-desc {
+	font-size: 0.8em;
+}
+.proj-title {
+	font-size: 0.9em;
+	font-weight: 500;
+	display: inline-block;
+}
+.proj-title-centered {
+	font-size: 0.9em;
+	font-weight: 500;
+	text-align: center;
+}
+.timespan {
+	color: #bbb;
+	font-size: 0.6em;
+	margin-left: 0.1em;
+	display: inline-block;
+	padding-right: 0.8em;
+	padding-top: 1.1em;
+	text-align: right;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+.company {
+	font-size: 0.7em;
+	display: inline-block;
+}
+a {
+	color: #ff1155;
+	text-decoration: none;
+}
+ul {
+	margin-top: 0.2em;
+}
+.project-list-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.project-list-normal {
+	margin-bottom: 4em;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+} */
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 16em;
+	background-color: var(--coffee);
+	color: var(--light-almond);
+	text-align: center;
+	padding: 0.5em 0;
+	padding-bottom: 0.8em;
+	border-radius: 6px;
+	font-size: 0.7em;
+	box-shadow: 0.1em 0.1em 0.4em #0134;
+
+	/* Position the tooltip text - see examples below! */
+	width: 16em;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -8em; /* Use half of the width (120/2 = 60), to center the tooltip */
+	position: absolute;
+	z-index: 1;
+}
+.tooltip .tooltiptext::after {
+	content: " ";
+	position: absolute;
+	top: 100%; /* At the bottom of the tooltip */
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: var(--coffee) transparent transparent transparent;
+}
+
+@media screen and (max-device-width: 480px) {
+	.tooltip .tooltiptext {
+		visibility: hidden;
+		display: none;
+	}
+	.tooltip .tooltiptext::after {
+		visibility: hidden;
+		display: none;
+	}
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
+/* <for the image gallery> */
+/* .row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	padding: 0 4px;
+} */
+
+/* Create three equal columns that sits next to each other */
+/* .column {
+	-ms-flex: 32%;
+	flex: 32%;
+	max-width: 32%;
+	padding: 20px 5px;
+} */
+
+/* .column img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+} */
+
+/* .column video {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+} */
+
+/* Responsive layout - makes a single column-layout instead of three columns */
+/* @media screen and (max-device-width: 480px) {
+	.column {
+		-ms-flex: 100%;
+		flex: 100%;
+		max-width: 100%;
+	}
+} */
+/* </for the image gallery> */
+
+/* <for the CTA button> */
+.cta_button {
+	min-height: 60px;
+	min-width: 180px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-family: "Cormorant", arial, sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin: 5px;
+	cursor: pointer;
+	color: var(--light-almond);
+	/* background: black; */
+	position: relative;
+	z-index: 0;
+	border-radius: 15px;
+}
+
+.cta_button:before {
+	content: "";
+	background: linear-gradient(
+		45deg,
+		#ff0000,
+		#ff7300,
+		#fffb00,
+		#48ff00,
+		#00ffd5,
+		#002bff,
+		#7a00ff,
+		#ff00c8,
+		#ff0000
+	);
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	background-size: 400%;
+	z-index: -1;
+	filter: blur(5px);
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	animation: glowing 20s linear infinite;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	border-radius: 10px;
+}
+
+.cta_button:hover:before {
+	opacity: 1;
+}
+
+.cta_button:after {
+	z-index: -1;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(45deg, var(--wine), var(--coffee));
+	left: 0;
+	top: 0;
+	border-radius: 10px;
+}
+
+@media screen and (max-device-width: 480px) {
+	.cta_button {
+		min-height: 100px;
+		min-width: 300px;
+		font-size: 40px;
+		border-radius: 20px;
+	}
+
+	.cta_button:before {
+		border-radius: 20px;
+	}
+
+	.cta_button:after {
+		border-radius: 20px;
+	}
+}
+
+@keyframes glowing {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+/* <for the CTA button> */
