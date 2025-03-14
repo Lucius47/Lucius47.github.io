@@ -1,22 +1,19 @@
 :root {
-	--wine: #722f37;
-	--dutch-white: #efdfbb;
-	--light-almond: #eee5da;
-	--coffee: #6f4e37;
-	--ecru: #c2b280;
+  --wine: #722f37;
+  --dutch-white: #efdfbb;
+  --light-almond: #eee5da;
+  --coffee: #6f4e37;
+  --ecru: #c2b280;
 }
 
 body {
-	/* background-color: #ffffff;
-    color: #666; */
-
-	background-color: var(--dutch-white);
-	color: #ddd;
-
-	font-family: "Segoe UI", sans-serif, verdana;
-	font-size: 1.2em;
-	margin: 0;
-	margin-top: 1.5em;
+  max-width: 960px;
+  margin: auto;
+  background-color: var(--dutch-white);
+  color: #ddd;
+  font-family: "Segoe UI", sans-serif, verdana;
+  font-size: 1.2em;
+  /* margin-top: 1.5em; */
 }
 
 /* only dark mode */
@@ -28,19 +25,19 @@ body {
   } */
 
 @media screen and (max-device-width: 480px) {
-	body {
-		font-size: 2em;
-		margin-top: 0.4em;
-	}
+  body {
+    font-size: 2em;
+    margin-top: 0.4em;
+  }
 }
 
 .name {
-	/* font-family: Cormorant; */
-	font-family: "Roboto", sans-serif;
-	font-variant: small-caps;
-	font-size: 2em;
-	font-weight: bold;
-	color: var(--wine);
+  /* font-family: Cormorant; */
+  font-family: "Roboto", sans-serif;
+  font-variant: small-caps;
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--wine);
 }
 
 /* .name_sub {
@@ -53,56 +50,56 @@ body {
 	font-size: 0.9em;
 } */
 .outer {
-	display: table;
-	position: absolute;
-	height: 100%;
-	width: 100%;
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 .middle {
-	display: table-cell;
-	vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
 }
 .inner {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 800px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
 }
 @media screen and (max-device-width: 480px) {
-	.inner {
-		max-width: 100%;
-	}
+  .inner {
+    max-width: 100%;
+  }
 }
 .main_card {
-	padding-bottom: 12px;
-	padding-top: 8px;
-	border-radius: 64px;
+  padding-bottom: 12px;
+  padding-top: 8px;
+  border-radius: 64px;
 }
 .profile_pic {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 @media screen and (max-device-width: 480px) {
-	.profile_pic {
-		margin-bottom: 0.1em;
-	}
+  .profile_pic {
+    margin-bottom: 0.1em;
+  }
 }
 
 .profile_pic img {
-	display: block;
-	margin: auto;
-	border-radius: 160px;
-	overflow: hidden;
-	border-style: solid;
-	border-color: var(--coffee);
-	border-width: 4px;
+  display: block;
+  margin: auto;
+  border-radius: 160px;
+  overflow: hidden;
+  border-style: solid;
+  border-color: var(--coffee);
+  border-width: 4px;
 }
 .social_icon {
-	margin-left: 8px;
-	margin-right: 8px;
-	width: 32px;
-	height: 32px;
-	/* filter: drop-shadow(1px 3px 1px #15202b33 ); */
-	filter: drop-shadow(2px 3px 2px black);
+  margin-left: 8px;
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  /* filter: drop-shadow(1px 3px 1px #15202b33 ); */
+  filter: drop-shadow(2px 3px 2px black);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -112,46 +109,46 @@ body {
   } */
 
 @media screen and (max-device-width: 480px) {
-	.social_icon {
-		width: 64px;
-		height: 64px;
-		margin-left: 16px;
-		margin-right: 16px;
-	}
+  .social_icon {
+    width: 64px;
+    height: 64px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 }
 .social_icons {
-	margin-top: 0.1em;
+  margin-top: 0.1em;
 }
 .email {
-	margin-top: 0.4em;
-	font-family: monospace;
+  margin-top: 0.4em;
+  font-family: monospace;
 }
 .email-sub {
-	margin-top: 0.4em;
-	font-size: 75%;
-	font-family: monospace;
+  margin-top: 0.4em;
+  font-size: 75%;
+  font-family: monospace;
 }
 
 h3 {
-	margin-top: 1.3em;
-	margin-bottom: 0.4em;
-	font-family: Cormorant;
-	font-size: 1.6em;
-	font-weight: 100;
-	text-decoration: underline;
-	text-decoration-thickness: from-font;
-	text-decoration-color: #aaa;
+  margin-top: 1.3em;
+  margin-bottom: 0.4em;
+  font-family: Cormorant;
+  font-size: 1.6em;
+  font-weight: 100;
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-decoration-color: #aaa;
 }
 h3:after {
-	content: "\00a0\00a0";
+  content: "\00a0\00a0";
 }
 h3:before {
-	content: "\00a0\00a0";
+  content: "\00a0\00a0";
 }
 @media screen and (max-device-width: 480px) {
-	h3 {
-		margin-top: 0.6em;
-	}
+  h3 {
+    margin-top: 0.6em;
+  }
 }
 
 /* .proj-card img {
@@ -266,56 +263,56 @@ ul {
 } */
 
 .tooltip {
-	position: relative;
-	display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 /* Tooltip text */
 .tooltip .tooltiptext {
-	visibility: hidden;
-	width: 16em;
-	background-color: var(--coffee);
-	color: var(--light-almond);
-	text-align: center;
-	padding: 0.5em 0;
-	padding-bottom: 0.8em;
-	border-radius: 6px;
-	font-size: 0.7em;
-	box-shadow: 0.1em 0.1em 0.4em #0134;
+  visibility: hidden;
+  width: 16em;
+  background-color: var(--coffee);
+  color: var(--light-almond);
+  text-align: center;
+  padding: 0.5em 0;
+  padding-bottom: 0.8em;
+  border-radius: 6px;
+  font-size: 0.7em;
+  box-shadow: 0.1em 0.1em 0.4em #0134;
 
-	/* Position the tooltip text - see examples below! */
-	width: 16em;
-	bottom: 100%;
-	left: 50%;
-	margin-left: -8em; /* Use half of the width (120/2 = 60), to center the tooltip */
-	position: absolute;
-	z-index: 1;
+  /* Position the tooltip text - see examples below! */
+  width: 16em;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -8em; /* Use half of the width (120/2 = 60), to center the tooltip */
+  position: absolute;
+  z-index: 1;
 }
 .tooltip .tooltiptext::after {
-	content: " ";
-	position: absolute;
-	top: 100%; /* At the bottom of the tooltip */
-	left: 50%;
-	margin-left: -5px;
-	border-width: 5px;
-	border-style: solid;
-	border-color: var(--coffee) transparent transparent transparent;
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--coffee) transparent transparent transparent;
 }
 
 @media screen and (max-device-width: 480px) {
-	.tooltip .tooltiptext {
-		visibility: hidden;
-		display: none;
-	}
-	.tooltip .tooltiptext::after {
-		visibility: hidden;
-		display: none;
-	}
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    display: none;
+  }
+  .tooltip .tooltiptext::after {
+    visibility: hidden;
+    display: none;
+  }
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
-	visibility: visible;
+  visibility: visible;
 }
 
 /* <for the image gallery> */
@@ -359,96 +356,96 @@ ul {
 
 /* <for the CTA button> */
 .cta_button {
-	min-height: 60px;
-	min-width: 180px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	font-family: "Cormorant", arial, sans-serif;
-	font-weight: bold;
-	font-size: 20px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 30px;
-	padding-right: 30px;
-	margin: 5px;
-	cursor: pointer;
-	color: var(--light-almond);
-	/* background: black; */
-	position: relative;
-	z-index: 0;
-	border-radius: 15px;
+  min-height: 60px;
+  min-width: 180px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Cormorant", arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 5px;
+  cursor: pointer;
+  color: var(--light-almond);
+  /* background: black; */
+  position: relative;
+  z-index: 0;
+  border-radius: 15px;
 }
 
 .cta_button:before {
-	content: "";
-	background: linear-gradient(
-		45deg,
-		#ff0000,
-		#ff7300,
-		#fffb00,
-		#48ff00,
-		#00ffd5,
-		#002bff,
-		#7a00ff,
-		#ff00c8,
-		#ff0000
-	);
-	position: absolute;
-	top: -2px;
-	left: -2px;
-	background-size: 400%;
-	z-index: -1;
-	filter: blur(5px);
-	width: calc(100% + 4px);
-	height: calc(100% + 4px);
-	animation: glowing 20s linear infinite;
-	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
-	border-radius: 10px;
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
 .cta_button:hover:before {
-	opacity: 1;
+  opacity: 1;
 }
 
 .cta_button:after {
-	z-index: -1;
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(45deg, var(--wine), var(--coffee));
-	left: 0;
-	top: 0;
-	border-radius: 10px;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--wine), var(--coffee));
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
 
 @media screen and (max-device-width: 480px) {
-	.cta_button {
-		min-height: 100px;
-		min-width: 300px;
-		font-size: 40px;
-		border-radius: 20px;
-	}
+  .cta_button {
+    min-height: 100px;
+    min-width: 300px;
+    font-size: 40px;
+    border-radius: 20px;
+  }
 
-	.cta_button:before {
-		border-radius: 20px;
-	}
+  .cta_button:before {
+    border-radius: 20px;
+  }
 
-	.cta_button:after {
-		border-radius: 20px;
-	}
+  .cta_button:after {
+    border-radius: 20px;
+  }
 }
 
 @keyframes glowing {
-	0% {
-		background-position: 0 0;
-	}
-	50% {
-		background-position: 400% 0;
-	}
-	100% {
-		background-position: 0 0;
-	}
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 /* <for the CTA button> */
