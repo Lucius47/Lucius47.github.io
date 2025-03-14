@@ -49,16 +49,16 @@ body {
 /* .desc {
 	font-size: 0.9em;
 } */
-.outer {
+/* .outer {
   display: table;
   position: absolute;
   height: 100%;
   width: 100%;
-}
-.middle {
+} */
+/* .middle {
   display: table-cell;
   vertical-align: middle;
-}
+} */
 .inner {
   text-align: center;
   margin-left: auto;
@@ -76,6 +76,7 @@ body {
   border-radius: 64px;
 }
 .profile_pic {
+  margin-top: 1em;
   margin-bottom: 1em;
 }
 @media screen and (max-device-width: 480px) {
