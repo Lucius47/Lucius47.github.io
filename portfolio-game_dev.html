@@ -88,10 +88,17 @@
         }
       }
 
+      .labels {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
       .label {
         background-color: #722f37;
         border-radius: 0.5em;
         padding: 0.3em;
+        margin: 0.1em;
+        text-wrap: nowrap;
       }
       .label:hover {
         background-color: #6f4e37;
@@ -168,10 +175,11 @@
         <ul>
           <li>Visit <a href="https://xana.net/">Official Website</a></li>
         </ul>
-        <!-- labels -->
-        <span class="label">Unity</span>
-        <span class="label">C#</span>
-        <span class="label">SocketIO</span>
+        <div class="labels">
+          <span class="label">Unity</span>
+          <span class="label">C#</span>
+          <span class="label">SocketIO</span>
+        </div>
       </div>
     </div>
 
@@ -193,9 +201,11 @@
           <li>Made inside Xana</li>
           <li>Made using Photon Fusion 2 in dedicated server mode.</li>
         </ul>
-        <span class="label">Photon Fusion</span>
-        <span class="label">Playfab</span>
-        <span class="label">APIs</span>
+        <div class="labels">
+          <span class="label">Photon Fusion</span>
+          <span class="label">Playfab</span>
+          <span class="label">APIs</span>
+        </div>
       </div>
     </div>
 
@@ -213,9 +223,11 @@
         <ul>
           <li>Unity WebGL game made for Telegram Games</li>
         </ul>
-        <span class="label">WebSockets</span>
-        <span class="label">Telegram API</span>
-        <span class="label">WebGL</span>
+        <div class="labels">
+          <span class="label">WebSockets</span>
+          <span class="label">Telegram API</span>
+          <span class="label">WebGL</span>
+        </div>
       </div>
     </div>
 
@@ -262,9 +274,11 @@
             >
           </li>
         </ul>
-        <span class="label">UFE 2.5</span>
-        <span class="label">Unity NGO</span>
-        <span class="label">Rollback Netcode</span>
+        <div class="labels">
+          <div class="label">UFE 2.5</div>
+          <div class="label">Unity NGO</div>
+          <div class="label">Rollback Netcode</div>
+        </div>
       </div>
     </div>
 
@@ -296,8 +310,10 @@
             >
           </li>
         </ul>
-        <span class="label">WPF</span>
-        <span class="label">.NET 8.0</span>
+        <div class="labels">
+          <span class="label">WPF</span>
+          <span class="label">.NET 8.0</span>
+        </div>
       </div>
     </div>
 
@@ -325,10 +341,12 @@
             >
           </li>
         </ul>
-        <span class="label">Unity</span>
-        <span class="label">C#</span>
-        <span class="label">Blender</span>
-        <span class="label">Figma</span>
+        <div class="labels">
+          <span class="label">Unity</span>
+          <span class="label">C#</span>
+          <span class="label">Blender</span>
+          <span class="label">Figma</span>
+        </div>
       </div>
     </div>
 
@@ -359,10 +377,12 @@
             >
           </li>
         </ul>
-        <span class="label">Express</span>
-        <span class="label">PostgreSQL</span>
-        <span class="label">React</span>
-        <span class="label">Bootstrap</span>
+        <div class="labels">
+          <span class="label">Express</span>
+          <span class="label">PostgreSQL</span>
+          <span class="label">React</span>
+          <span class="label">Bootstrap</span>
+        </div>
       </div>
     </div>
 
@@ -397,9 +417,42 @@
             >
           </li>
         </ul>
-        <span class="label">Godot</span>
-        <span class="label">GDScript</span>
-        <span class="label">Photoshop</span>
+        <div class="labels">
+          <span class="label">Godot</span>
+          <span class="label">GDScript</span>
+          <span class="label">Photoshop</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="parent">
+      <div class="childImg">
+        <img
+          src="https://picsum.photos/seed/2352853/280/200"
+          alt=""
+          style="width: 280px; height: 200px"
+        />
+      </div>
+      <div class="childDesc">
+        <h1>Personal Website</h1>
+        <p>
+          A minimalist personal website to showcase my projects and skills, and
+          to blog about my experiences.
+        </p>
+        <ul>
+          <li>
+            Made using HTML, CSS, and JavaScript. Hosted on GitHub Pages:
+            <a href="https://muneebullah.com" target="_blank"
+              >muneebullah.com</a
+            >
+          </li>
+        </ul>
+        <div class="labels">
+          <span class="label">HTML</span>
+          <span class="label">CSS</span>
+          <span class="label">JavaScript</span>
+          <span class="label">GitHub Pages</span>
+        </div>
       </div>
     </div>
 
@@ -409,6 +462,10 @@
       </div>
       <div class="childDesc">
         <h1><a href="">More Projects</a></h1>
+        <p>
+          Check out my GitHub and YouTube for other projects including
+          simulators, VR experiences, and unfinished prototypes.
+        </p>
       </div>
     </div>
   </body>
