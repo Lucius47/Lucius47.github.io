@@ -1,0 +1,27 @@
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Build artifacts & caches
+node_modules/
+dist/
+build/
+
+# Local development
+.env
+.env.local
+*.log
+
+# Dependencies
+package-lock.json
+yarn.lock
+
+# Temporary files
+*.tmp
+*.temp
