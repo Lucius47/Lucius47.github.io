@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=0.5, shrink-to-fit=no"
+    />
+    <title>Game Development - Muneeb Ullah Portfolio</title>
+    <meta name="description" content="Portfolio of game development projects by Muneeb Ullah, including commercial games, prototypes, and experimental projects.">
+    <meta property="og:description" content="Game development portfolio showcasing commercial games, multiplayer experiences, and experimental projects">
+    <meta name="twitter:title" content="Game Development - Muneeb Ullah Portfolio">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://muneebullah.com/images/projectcards/xana.jpg" />
+    <meta name="twitter:image" content="https://muneebullah.com/images/projectcards/xana.jpg" />
+    <meta name="twitter:description" content="Game development portfolio showcasing commercial games, multiplayer experiences, and experimental projects" />
+    <meta property="og:title" content="Game Development - Muneeb Ullah Portfolio" />
+    <meta property="og:site_name" content="Muneeb Ullah">
+    <link rel="canonical" href="https://muneebullah.com/portfolio-game_dev.html">
+    <meta property="og:url" content="https://muneebullah.com/portfolio-game_dev.html">
+    <meta property="og:image:alt" content="Game development portfolio">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:site" content="@MuneebShaw">
+    <meta name="twitter:creator" content="@MuneebShaw">
+    <!-- LinkedIn Tags -->
+    <meta property="article:author" content="https://www.linkedin.com/in/MuneebShaw">
+    <!-- Schema.org structured data for Portfolio -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Game Development Portfolio",
+      "creator": {
+        "@type": "Person",
+        "name": "Muneeb Ullah",
+        "url": "https://muneebullah.com",
+        "sameAs": ["https://github.com/Lucius47", "https://twitter.com/MuneebShaw"]
+      },
+      "description": "Portfolio showcasing commercial games, multiplayer experiences, and experimental projects",
+      "url": "https://muneebullah.com/portfolio-game_dev.html",
+      "image": "https://muneebullah.com/images/projectcards/xana.jpg"
+    }
+    </script>
+    <link rel="icon" href="/images/heart.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link href="styles.css" rel="stylesheet" />
+
+    <style>
+      .parent {
+        font-family: monospace, Helvetica, sans-serif;
+        color: #efdfbb;
+        display: flex;
+        flex-wrap: nowrap;
+      }
+
+      .childImg {
+        flex: 1 0 auto;
+        border: 1px solid black;
+        margin: 2px;
+        padding: 10px;
+        box-sizing: border-box;
+        background: rgb(48, 48, 37);
+
+        max-width: 300px;
+        min-width: 300px;
+
+        /* make the image inside this div to be exactly in the center */
+        display: flex;
+      }
+
+      .childImg img {
+        margin: auto;
+        display: block;
+      }
+
+      .childDesc {
+        flex: 1 0 auto;
+        border: 1px solid black;
+        margin: 2px;
+        padding: 10px;
+        box-sizing: border-box;
+        max-width: 652px;
+        background: rgb(48, 48, 37);
+
+        a {
+          color: #ffffff;
+          text-decoration: underline;
+        }
+
+        a:hover {
+          color: #cccccc;
+        }
+
+        h1 {
+          margin: 0;
+        }
+      }
+
+      /* This media query applies styles for screens with a width of 480px or less */
+      @media screen and (max-device-width: 480px) {
+        .childImg,
+        .childDesc {
+          flex-basis: 100%; /* Children take full width on small screens */
+          max-width: 100%;
+          min-width: 100%;
+          width: 100%;
+          border: none;
+          margin: 0;
+        }
+
+        .parent {
+          border: 1px solid black;
+          margin: 2px;
+          flex-wrap: wrap;
+        }
+      }
+
+      .labels {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .label {
+        background-color: #722f37;
+        border-radius: 0.5em;
+        padding: 0.3em;
+        margin: 0.1em;
+        text-wrap: nowrap;
+      }
+      .label:hover {
+        background-color: #6f4e37;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/portfolio-game_dev.html" class="active">Projects</a></li>
+        <li><a href="/#skills">Services</a></li>
+        <li style="float: right">
+          <a href="https://www.linkedin.com/in/MuneebShaw" target="_blank"
+            >Contact</a
+          >
+        </li>
+        <li style="float: right">
+          <a href="/blog.html">Blog</a>
+        </li>
+      </ul>
+    </div>
+
+    <h1>My Projects</h1>
+
+    <div class="parent">
+      <div class="childImg">
+        <img
+          src="/images/projectcards/xana.jpg"
+          alt="xana"
+          style="width: 280px; height: 200px"
+        />
+      </div>
+      <div class="childDesc">
+        <h1>Xana</h1>
+        <p>
+          Web3 multiverse platform. Explore user created worlds with your
+          friends.
+        </p>
+        <ul>
+          <li>Visit <a href="https://xana.net/">Official Website</a></li>
+        </ul>
+        <div class="labels">
+          <span class="label">Unity</span>
+          <span class="label">C#</span>
+          <span class="label">SocketIO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="parent">
+      <div class="childImg">
+        <img
+          src="/images/projectcards/RFM.webp"
+          alt="run for money"
+          style="width: 280px; height: 200px"
+        />
+      </div>
+      <div class="childDesc">
+        <h1>Run for Money</h1>
+        <p>
+          Multiplayer hide and seek game based on a Korean TV show of the same
+          name.
+        </p>
+        <ul>
+          <li>Made inside Xana</li>
+          <li>Made using Photon Fusion 2 in dedicated server mode.</li>
+        </ul>
+        <div class="labels">
+          <span class="label">Photon Fusion</span>
+          <span class="label">Playfab</span>
+          <span class="label">APIs</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="parent">
+      <div class="childImg">
+        <img
+          src="/images/projectcards/x-duel.jpg"
+          alt="x-duel"
+          style="width: 280px; height: 200px"
+        />
+      </div>
+      <div class="childDesc">
+        <h1>X-Duel</h1>
+        <p>Fast-paced cards duelling game.</p>
+        <ul>
+          <li>Unity WebGL game made for Telegram Games</li>
+        </ul>
+        <div class="labels">
+          <span class="label">WebSockets</span>
+          <span class="label">Telegram API</span>
+          <span class="label">WebGL</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="parent">
+      <div class="childImg">
+        <img
+          src="/images/projectcards/breaking-down.png"
+          alt=""
+          style="width: 280px; height: 200px"
+        />
+      </div>
+      <div class="childDesc">
+        <h1>Breaking Down</h1>
+        <p>
+          Multiplayer boxing game based on a Japanese boxing tournament of the
+          same name.
+        </p>
+        <ul>
+          <li>Made using Universal Fighting Engine (UFE) 2.5</li>
+          <li>
+            Advanced features such as rollback netcode for smooth online
+            gameplay.
+          </li>
+          <li>
+            Latest teaser on
+            <a
+              href="https://www.youtube.com/watch?v=v6q8CJKJe_c"
+              target="_blank"
+              >YouTube</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=PSWE3BnISE0"
+              target="_blank"
+              >Breaking Down Live</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://xana.net/blog/breakingdown-no1-mma-entertainment-show-enters-the-web3-market-in-collaboration-with-xana-metaverse/"
+              target="_blank"
+              >Blog</a
+            >
+          </li>
+        </ul>
+        <div class="labels">
+          <div class="label">UFE 2.5</div>
+          <div class="label">Unity NGO</div>
+          <div class="label">Rollback Netcode</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="parent">
+      <div class="childImg">
+        <img
+          src="/images/projectcards/modChess.webp"
+          alt=""
+          style="width: 280px; height: 200px"
+        />
+      </div>
+      <div class="childDesc">
+        <h1>Age of Chesspires</h1>
+        <p>Classic chess with additional moves, rules, and pieces.</p>
+        <ul>
+          <li>Made using Windows Presentation Foundation (WPF) and .NET 8.0</li>
+          <li>
+            Demo available on
+            <a
+              href="https://drive.google.com/file/d/184_xfQRWmCHMIIRV4wjEbBu43WjOPG0U/view?usp=sharing"
+              target="_blank"
+              >Google Drive</a
+            >
+          </li>
+          <li>
+            Source code available on
+            <a href="https://github.com/Lucius47/ModChess" target="_blank"
+              >GitHub</a
+            >
+          </li>
+        </ul>
+        <div class="labels">
+          <span class="label">WPF</span>
+          <span class="label">.NET 8.0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="parent">
+      <div class="childImg">
+        <img
+          src="/images/projectcards/idle-tycoon.webp"
+          alt=""
+          style="width: 280px; height: 200px"
+        />
+      </div>
+      <div class="childDesc">
+        <h1>Fashion Outlet</h1>
+        <p>Hypercasual Idle tycoon. Manage a store and sell fasion items.</p>
+        <ul>
+          <li>Made using UnityEngine</li>
+          <li>
+            Gameplay video available on
+            <a href="https://youtu.be/Cu_jJn__n9k" target="_blank">YouTube</a>
+          </li>
+          <li>
+            Source code available on
+            <a href="https://github.com/Lucius47/Idle-Tycoon" target="_blank"
+              >GitHub</a
+            >
+          </li>
+        </ul>
+        <div class="labels">
+          <span class="label">Unity</span>
+          <span class="label">C#</span>
+          <span class="label">Blender</span>
+          <span class="label">Figma</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="parent">
+      <div class="childImg">
+        <img
+          src="/images/projectcards/twitter-reborn.webp"
+          alt=""
+          style="width: 280px; height: 200px"
+        />
+      </div>
+      <div class="childDesc">
+        <h1>Twitter Reborn</h1>
+        <p>Twitter clone made as a hobby project.</p>
+        <ul>
+          <li>Backend in ExpressJS with PostgreSQL database.</li>
+          <li>Front-end in ReactJS and Bootstrap.</li>
+          <li>
+            Source code available on Github:
+            <a
+              href="https://github.com/Lucius47/twitter-backend"
+              target="_blank"
+              >Server</a
+            >
+            |
+            <a href="https://github.com/Lucius47/twitter-reborn" target="_blank"
+              >Client</a
+            >
+          </li>
+        </ul>
+        <div class="labels">
+          <span class="label">Express</span>
+          <span class="label">PostgreSQL</span>
+          <span class="label">React</span>
+          <span class="label">Bootstrap</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="parent">
+      <div class="childImg">
+        <img
+          src="/images/projectcards/math-puzzle.png"
+          alt=""
+          style="width: 280px; height: 200px"
+        />
+      </div>
+      <div class="childDesc">
+        <h1>2048 Math Puzzle</h1>
+        <p>
+          Hypercasual math puzzle game. Match blocks of increasing exponenets of
+          2.
+        </p>
+        <ul>
+          <li>Made using Godot Engine</li>
+          <li>
+            Gameplay video available on
+            <a href="https://youtube.com" target="_blank">YouTube</a>
+          </li>
+          <li>
+            Demo available on
+            <a href="https://drive.google.com/" target="_blank">Google Drive</a>
+          </li>
+          <li>
+            Source code available on
+            <a href="https://github.com/Lucius47/2048-puzzle" target="_blank"
+              >GitHub</a
+            >
+          </li>
+        </ul>
+        <div class="labels">
+          <span class="label">Godot</span>
+          <span class="label">GDScript</span>
+          <span class="label">Photoshop</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="parent">
+      <div class="childImg">
+        <img
+          src="https://picsum.photos/seed/2352853/280/200"
+          alt=""
+          style="width: 280px; height: 200px"
+        />
+      </div>
+      <div class="childDesc">
+        <h1>Personal Website</h1>
+        <p>
+          A minimalist personal website to showcase my projects and skills, and
+          to blog about my experiences.
+        </p>
+        <ul>
+          <li>
+            Made using HTML, CSS, and JavaScript. Hosted on GitHub Pages:
+            <a href="https://muneebullah.com" target="_blank"
+              >muneebullah.com</a
+            >
+          </li>
+        </ul>
+        <div class="labels">
+          <span class="label">HTML</span>
+          <span class="label">CSS</span>
+          <span class="label">JavaScript</span>
+          <span class="label">GitHub Pages</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="parent">
+      <div class="childImg">
+        <img src="https://picsum.photos/280/200" alt="" />
+      </div>
+      <div class="childDesc">
+        <h1><a href="">More Projects</a></h1>
+        <p>
+          Check out my GitHub and YouTube for other projects including
+          simulators, VR experiences, and unfinished prototypes.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
