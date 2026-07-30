@@ -1189,6 +1189,7 @@
 
                 } else {
                     console.error('Error sending message:', response.statusText);
+                    console.log('Response:', response);
                     // show an error toast notification
                     document.getElementById('toastTitle').textContent = "Error!";
                     document.getElementById('toastMessage').textContent = "There was an issue sending your message. Please try again later.";
