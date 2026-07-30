@@ -972,13 +972,14 @@
     </div>
 
     <!-- Toast Notification Message Container -->
+    <!-- Separate icon for success and error -->
     <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none px-5 py-3.5 rounded-xl border border-amber-500/40 bg-theme-card text-theme-text shadow-xl flex items-center gap-3">
-        <div class="w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-500 flex items-center justify-center text-xs">
+        <div id="toastIcon">
             <i class="fa-solid fa-check"></i>
         </div>
         <div>
             <h5 class="text-xs font-bold font-serif" id="toastTitle">Message Transmitted</h5>
-            <p class="text-xs text-theme-muted" id="toastMessage">Thank you! Muneeb will reach out soon.</p>
+            <p class="text-xs text-theme-muted" id="toastMessage">Thank you! Action completed.</p>
         </div>
     </div>
 
@@ -996,6 +997,15 @@
         const themeIcon = document.getElementById('themeIcon');
         const themeLabel = document.getElementById('themeLabel');
         const mainHeader = document.getElementById('mainHeader');
+
+        // // press E or R to test toast notifications
+        // document.addEventListener('keydown', (e) => {
+        //     if (e.key === 'e' || e.key === 'E') {
+        //         showToast('Test Toast', 'This is a test notification for the toast system.');
+        //     } else if (e.key === 'r' || e.key === 'R') {
+        //         showToast('Error Toast', 'This is a test error notification for the toast system.', true);
+        //     }
+        // });
 
         function setTheme(themeName) {
             if (themeName === 'hearth') {
@@ -1204,42 +1214,67 @@
             // setTimeout(() => {
             //     toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
             // }, 4500);
+            
 
-            // send the message using a free service.
-            fetch('https://formspree.io/f/xvzenoga', {
+            fetch('https://splitforms.com/api/submit', {
                 method: 'POST',
-                body: new FormData(document.getElementById('contactForm')),
                 headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    console.log('Message sent successfully.');
-                    // show the toast notification
-                    document.getElementById('toastTitle').textContent = "Message Sent!";
-                    document.getElementById('toastMessage').textContent = `Thank you ${name}. Muneeb will review your transmission soon.`;
-
-                    toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams({
+                    access_key: 'a5f7108ed8e549cdbc170d21157d0e2a',
+                    subject: document.getElementById('inquiryTopic').value,
+                    name: name,
+                    email: document.getElementById('senderContactHandle').value,
+                    message: document.getElementById('senderMessage').value
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showToast("Message Sent!", `Thank you ${name}. Muneeb will review your transmission soon.`);
                     document.getElementById('contactForm').reset();
-
                     setTimeout(() => {
                         toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
                     }, 4500);
-
                 } else {
-                    console.error('Error sending message:', response.statusText);
-                    console.log('Response:', response);
-                    // show an error toast notification
-                    document.getElementById('toastTitle').textContent = "Error!";
-                    document.getElementById('toastMessage').textContent = "There was an issue sending your message. Please try again later.";
-                    toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+                    showToast("Submission Failed", "There was an error sending your message. Please try again later.", true);
+                    //document.getElementById('contactForm').reset();
                     setTimeout(() => {
                         toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
                     }, 4500);
                 }
-            }).catch(error => {
-                console.error('Error sending message:', error);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showToast("Submission Failed", "There was an error sending your message. Please try again later.", true);
+                //document.getElementById('contactForm').reset();
+                toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+                setTimeout(() => {
+                    toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+                }, 4500);
             });
+
+        }
+
+        // Generic function for showing toast messages
+        function showToast(title, message, isError = false) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastTitle').textContent = title;
+            document.getElementById('toastMessage').textContent = message;
+            const toastIcon = document.getElementById('toastIcon');
+            if (isError) {
+                toastIcon.className = 'w-7 h-7 rounded-lg bg-red-500/15 text-red-500 flex items-center justify-center text-xs';
+                toastIcon.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i>';
+            } else {
+                toastIcon.className = 'w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-500 flex items-center justify-center text-xs';
+                toastIcon.innerHTML = '<i class="fa-solid fa-check"></i>';
+            }
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }, 4500);
         }
 
         // -------------------------------------------------------------
