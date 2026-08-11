@@ -930,7 +930,7 @@
                                     ${this.tags.map(tag => `<span class="px-2.5 py-1 rounded bg-theme-bg text-theme-text text-xs font-mono border border-theme-border">${tag}</span>`).join('')}
                                 </div>
 
-                                <div class="flex items-center gap-3 pt-3">
+                                <div class="flex flex-wrap items-center gap-3 pt-3">
                                     ${this.links.map(link => `
                                         <a href="${link.url}" target="_blank" class="px-3.5 py-2 rounded-lg border border-theme-border hover:bg-theme-cardHover text-xs font-semibold">
                                             <i class="${link.icon} mr-1.5"></i>${link.label}
